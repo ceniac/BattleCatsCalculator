@@ -227,7 +227,7 @@ namespace BatCatTracks
 			int bestSeed = 0;
 			var randomUnits = new Unit[expectedUnits.Count];
 			var mapping = BuildRarityMapping(rarities);
-			int index, seed;
+			int index = 0, seed;
 
 			for (int startSeed = int.MinValue; startSeed < int.MaxValue; startSeed++)
 			{
@@ -249,10 +249,15 @@ namespace BatCatTracks
 
 				do
 				{
-					randomUnits[index++] = GetNextUnit(ref seed, mapping, eventDict);
-					matched = randomUnits[index - 1].Id == expectedUnits[index - 1].Id
-						// Battle Cats avoids having back-to-back duplicate rares - the next line is a workaround for that
-						|| (index > 1 && randomUnits[index - 1].Rarity == Rarity.Rare && randomUnits[index - 1].Id == randomUnits[index - 2].Id);
+					randomUnits[index] = GetNextUnit(ref seed, mapping, eventDict);
+					matched = randomUnits[index].Id == expectedUnits[index].Id
+						// Battle Cats avoids having back-to-back duplicate rares - the next check is a workaround for that
+						|| (index > 0
+							&& randomUnits[index - 1].Id == expectedUnits[index - 1].Id
+							&& expectedUnits[index].Rarity == Rarity.Rare
+							&& expectedUnits[index - 1].Rarity == Rarity.Rare
+							&& randomUnits[index].Id == randomUnits[index - 1].Id);
+					index++;
 				} while (index < expectedUnits.Count && matched);
 
 				if (index == expectedUnits.Count && randomUnits.Last() == expectedUnits.Last())
@@ -268,6 +273,10 @@ namespace BatCatTracks
 			}
 
 			AbortCalculation = false;
+
+			if (index < expectedUnits.Count)
+				return 0;
+
 			return bestSeed;
 		}
 
