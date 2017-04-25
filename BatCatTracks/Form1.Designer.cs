@@ -43,24 +43,30 @@
 			this.tbPullCount = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.dgvPullList = new System.Windows.Forms.DataGridView();
+			this.tabControl1 = new System.Windows.Forms.TabControl();
+			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvPullList)).BeginInit();
+			this.tabControl1.SuspendLayout();
+			this.tabPage1.SuspendLayout();
+			this.tabPage2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tbOutput
 			// 
 			this.tbOutput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.tbOutput.Location = new System.Drawing.Point(12, 12);
+			this.tbOutput.Location = new System.Drawing.Point(8, 6);
 			this.tbOutput.Multiline = true;
 			this.tbOutput.Name = "tbOutput";
 			this.tbOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.tbOutput.Size = new System.Drawing.Size(690, 143);
+			this.tbOutput.Size = new System.Drawing.Size(689, 527);
 			this.tbOutput.TabIndex = 100;
 			// 
 			// btnGetPulls
 			// 
-			this.btnGetPulls.Location = new System.Drawing.Point(80, 96);
+			this.btnGetPulls.Location = new System.Drawing.Point(172, 14);
 			this.btnGetPulls.Name = "btnGetPulls";
 			this.btnGetPulls.Size = new System.Drawing.Size(75, 23);
 			this.btnGetPulls.TabIndex = 3;
@@ -70,7 +76,7 @@
 			// 
 			// tbEventsToGet
 			// 
-			this.tbEventsToGet.Location = new System.Drawing.Point(47, 298);
+			this.tbEventsToGet.Location = new System.Drawing.Point(414, 46);
 			this.tbEventsToGet.Name = "tbEventsToGet";
 			this.tbEventsToGet.Size = new System.Drawing.Size(108, 20);
 			this.tbEventsToGet.TabIndex = 0;
@@ -79,7 +85,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(6, 301);
+			this.label1.Location = new System.Drawing.Point(373, 49);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(35, 13);
 			this.label1.TabIndex = 3;
@@ -104,9 +110,9 @@
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Controls.Add(this.btnGetPulls);
 			this.groupBox1.Controls.Add(this.tbEventsToGet);
-			this.groupBox1.Location = new System.Drawing.Point(13, 161);
+			this.groupBox1.Location = new System.Drawing.Point(6, 6);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(689, 397);
+			this.groupBox1.Size = new System.Drawing.Size(695, 529);
 			this.groupBox1.TabIndex = 4;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Get Pulls";
@@ -114,7 +120,7 @@
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(7, 274);
+			this.label4.Location = new System.Drawing.Point(374, 22);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(30, 13);
 			this.label4.TabIndex = 106;
@@ -124,7 +130,7 @@
 			// cbTrackB
 			// 
 			this.cbTrackB.AutoSize = true;
-			this.cbTrackB.Location = new System.Drawing.Point(11, 102);
+			this.cbTrackB.Location = new System.Drawing.Point(172, 49);
 			this.cbTrackB.Name = "cbTrackB";
 			this.cbTrackB.Size = new System.Drawing.Size(64, 17);
 			this.cbTrackB.TabIndex = 105;
@@ -144,7 +150,7 @@
 			// 
 			this.ddlRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.ddlRate.FormattingEnabled = true;
-			this.ddlRate.Location = new System.Drawing.Point(46, 271);
+			this.ddlRate.Location = new System.Drawing.Point(413, 19);
 			this.ddlRate.Name = "ddlRate";
 			this.ddlRate.Size = new System.Drawing.Size(108, 21);
 			this.ddlRate.TabIndex = 103;
@@ -152,7 +158,8 @@
 			// 
 			// btnFindSeed
 			// 
-			this.btnFindSeed.Location = new System.Drawing.Point(80, 125);
+			this.btnFindSeed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnFindSeed.Location = new System.Drawing.Point(614, 12);
 			this.btnFindSeed.Name = "btnFindSeed";
 			this.btnFindSeed.Size = new System.Drawing.Size(75, 23);
 			this.btnFindSeed.TabIndex = 102;
@@ -200,27 +207,64 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.dgvPullList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvPullList.Location = new System.Drawing.Point(161, 16);
+			this.dgvPullList.Location = new System.Drawing.Point(6, 96);
 			this.dgvPullList.Name = "dgvPullList";
 			this.dgvPullList.ReadOnly = true;
-			this.dgvPullList.Size = new System.Drawing.Size(522, 375);
+			this.dgvPullList.Size = new System.Drawing.Size(683, 427);
 			this.dgvPullList.TabIndex = 101;
+			// 
+			// tabControl1
+			// 
+			this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.tabControl1.Controls.Add(this.tabPage1);
+			this.tabControl1.Controls.Add(this.tabPage2);
+			this.tabControl1.Location = new System.Drawing.Point(3, 3);
+			this.tabControl1.Name = "tabControl1";
+			this.tabControl1.SelectedIndex = 0;
+			this.tabControl1.Size = new System.Drawing.Size(716, 572);
+			this.tabControl1.TabIndex = 101;
+			// 
+			// tabPage1
+			// 
+			this.tabPage1.Controls.Add(this.groupBox1);
+			this.tabPage1.Location = new System.Drawing.Point(4, 22);
+			this.tabPage1.Name = "tabPage1";
+			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage1.Size = new System.Drawing.Size(708, 546);
+			this.tabPage1.TabIndex = 0;
+			this.tabPage1.Text = "Tracks";
+			this.tabPage1.UseVisualStyleBackColor = true;
+			// 
+			// tabPage2
+			// 
+			this.tabPage2.Controls.Add(this.tbOutput);
+			this.tabPage2.Location = new System.Drawing.Point(4, 22);
+			this.tabPage2.Name = "tabPage2";
+			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage2.Size = new System.Drawing.Size(703, 544);
+			this.tabPage2.TabIndex = 1;
+			this.tabPage2.Text = "Reference";
+			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
 			// frmBatCatTracks
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(715, 570);
-			this.Controls.Add(this.groupBox1);
-			this.Controls.Add(this.tbOutput);
+			this.ClientSize = new System.Drawing.Size(720, 572);
+			this.Controls.Add(this.tabControl1);
 			this.Name = "frmBatCatTracks";
 			this.Text = "Battle Cats Tracks Calculator";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnExit);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvPullList)).EndInit();
+			this.tabControl1.ResumeLayout(false);
+			this.tabPage1.ResumeLayout(false);
+			this.tabPage2.ResumeLayout(false);
+			this.tabPage2.PerformLayout();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
@@ -241,6 +285,9 @@
 		private System.Windows.Forms.ComboBox ddlEventName;
 		private System.Windows.Forms.CheckBox cbTrackB;
 		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.TabControl tabControl1;
+		private System.Windows.Forms.TabPage tabPage1;
+		private System.Windows.Forms.TabPage tabPage2;
 	}
 }
 
