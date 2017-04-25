@@ -89,7 +89,8 @@ namespace BatCatTracks
 				if (fields != null && fields.Length >= 3)
 				{
 					var unit = new Unit { Id = int.Parse(fields[0]), Name = fields[1] };
-					Enum.TryParse<Rarity>(fields[2], out Rarity rarity);
+					Rarity rarity;
+					Enum.TryParse<Rarity>(fields[2], out rarity);
 					unit.Rarity = rarity;
 
 					AllUnits.Add(unit);
