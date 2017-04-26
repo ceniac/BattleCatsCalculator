@@ -79,13 +79,6 @@ namespace BatCatTracks
 					tbOutput.Text += line + Environment.NewLine;
 				}
 			}
-
-			// 160 = normal
-			// 154 = ultrasouls
-			// 173 = ultrafest
-			// 168 = uberfest
-			// 167 = air
-			// 166 = red
 		}
 
 		private void btnGetPulls_Click(object sender, EventArgs e)
@@ -102,15 +95,88 @@ namespace BatCatTracks
 				MessageBox.Show("Please enter a valid seed.");
 				return;
 			}
-			//var gatcha = checker.EventUnits[Convert.ToInt32(tbEventsToGet.Text)];
-			//var rarity = checker.RarityRates[(string)ddlRate.SelectedItem];
 
-			var gatcha = SelectedEvent;
+			var gatcha = checker.Events.First(g => g.Id == 160);
+			var almighties = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
+			gatcha = checker.Events.First(g => g.Id == 154);
+			var ultrasouls = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
+			gatcha = checker.Events.First(g => g.Id == 166);
+			var redbusters = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
+			gatcha = checker.Events.First(g => g.Id == 167);
+			var airbusters = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
+			gatcha = checker.Events.First(g => g.Id == 168);
+			var uberfest = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
+			gatcha = checker.Events.First(g => g.Id == 173);
+			var ultrafest = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
 
-			//var result = checker.GetUnits(seed, pullCount, gatcha, rarity);
-			var result = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
+			var table = new List<GatchaRow>();
 
-			dgvPullList.DataSource = result;
+			for (int i = 0; i < pullCount; i++)
+			{
+				var row = new GatchaRow();
+				row.Count = i;
+				row.Seed = almighties[i].Seed;
+				row.NormUnit = almighties[i].Name;
+				row.NR = RarityToPips(almighties[i].Rarity);
+				if (almighties[i].Name != ultrasouls[i].Name)
+				{
+					row.USUnit = ultrasouls[i].Name;
+					row.USR = RarityToPips(ultrasouls[i].Rarity);
+				}
+				if (almighties[i].Name != redbusters[i].Name)
+				{
+					row.RBUnit = redbusters[i].Name;
+					row.RBR = RarityToPips(redbusters[i].Rarity);
+				}
+				if (almighties[i].Name != airbusters[i].Name)
+				{
+					row.ABUnit = airbusters[i].Name;
+					row.ABR = RarityToPips(airbusters[i].Rarity);
+				}
+				if (almighties[i].Name != uberfest[i].Name)
+				{
+					row.UBUnit = uberfest[i].Name;
+					row.UBR = RarityToPips(uberfest[i].Rarity);
+				}
+				if (almighties[i].Name != ultrafest[i].Name)
+				{
+					row.ULUnit = ultrafest[i].Name;
+					row.ULR = RarityToPips(ultrafest[i].Rarity);
+				}
+
+				table.Add(row);
+			}
+
+			dgvPullList.DataSource = table;
+			dgvPullList.AutoResizeColumns();
+		}
+
+		private class GatchaRow
+		{
+			public int Count { get; set; }
+			public int Seed { get; set; }
+			public string NormUnit { get; set; }
+			public string NR { get; set; }
+			public string USUnit { get; set; }
+			public string USR { get; set; }
+			public string RBUnit { get; set; }
+			public string RBR { get; set; }
+			public string ABUnit { get; set; }
+			public string ABR { get; set; }
+			public string UBUnit { get; set; }
+			public string UBR { get; set; }
+			public string ULUnit { get; set; }
+			public string ULR { get; set; }
+		}
+
+		private string RarityToPips(Rarity r)
+		{
+			if (r == Rarity.UberRare)
+				return "U";
+			else if (r == Rarity.SuperRare)
+				return "s";
+			else
+				return "";
 		}
 
 		private void btnFindSeed_Click(object sender, EventArgs e)

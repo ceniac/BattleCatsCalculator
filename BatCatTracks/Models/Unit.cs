@@ -8,7 +8,18 @@ namespace BatCatTracks.Models
 {
 	public class Unit
 	{
+		public Unit() { }
+
+		public Unit(Unit other)
+		{
+			Id = other.Id;
+			Seed = 0;
+			Name = other.Name;
+			Rarity = other.Rarity;
+		}
+
 		public int Id { get; set; }
+		public int Seed { get; set; }
 		public string Name { get; set; }
 		public Rarity Rarity { get; set; }
 

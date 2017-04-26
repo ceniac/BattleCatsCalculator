@@ -288,9 +288,13 @@ namespace BatCatTracks
 
 			var result = new List<Unit>();
 			var mapping = BuildRarityMapping(rarities);
+			var rarityDict = CreateRarityDict(eventUnits);
+			int oldSeed;
 			for (int i = 0; i < count; i++)
 			{
-				result.Add(GetNextUnit(ref seed, mapping, CreateRarityDict(eventUnits)));
+				oldSeed = seed;
+				result.Add(new Unit(GetNextUnit(ref seed, mapping, rarityDict)));
+				result[i].Seed = oldSeed;
 			}
 
 			return result;
