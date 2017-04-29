@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace BatCatTracks
 	{
 		private TrackChecker checker = new TrackChecker();
 		private frmSeedCalculator seedCalc;
+		private List<string> export = null;
 
 		public frmBatCatTracks()
 		{
@@ -96,6 +98,10 @@ namespace BatCatTracks
 				return;
 			}
 
+			export = new List<string>();
+
+			string exportRow = "Row,Seed,NormalUnit,Rarity,UltraSouls,Rarity,RedBusters,Rarity,AirBusters,Rarity,UberFest,Rarity,UltraFest,Rarity";
+			export.Add(exportRow);
 			var gatcha = checker.Events.First(g => g.Id == 160);
 			var almighties = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
 			gatcha = checker.Events.First(g => g.Id == 154);
@@ -145,7 +151,12 @@ namespace BatCatTracks
 				}
 
 				table.Add(row);
+
+				exportRow = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}",
+					i, row.Seed, row.NormUnit, row.NR, row.USUnit, row.USR, row.RBUnit, row.RBR, row.ABUnit, row.ABR, row.UBUnit, row.UBR, row.ULUnit, row.ULR);
+				export.Add(exportRow);
 			}
+			btnExport.Enabled = true;
 
 			dgvPullList.DataSource = table;
 			dgvPullList.AutoResizeColumns();
@@ -184,6 +195,24 @@ namespace BatCatTracks
 			seedCalc.SetAvailableUnits(SelectedEvent.Units);
 
 			seedCalc.Show();
+		}
+
+		private void btnExport_Click(object sender, EventArgs e)
+		{
+			using (SaveFileDialog dialog = new SaveFileDialog())
+			{
+				dialog.Filter = "Comma separated files (*.csv)|*.csv|All files (*.*)|*.*";
+				dialog.FilterIndex = 1;
+				dialog.RestoreDirectory = true;
+
+				if (dialog.ShowDialog() == DialogResult.OK)
+				{
+					using (StreamWriter stream = new StreamWriter(dialog.OpenFile()))
+					{
+						export.ForEach(line => stream.WriteLine(line));
+					}
+				}
+			}
 		}
 
 		private GatchaEvent SelectedEvent

@@ -46,6 +46,7 @@
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.btnExport = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvPullList)).BeginInit();
 			this.tabControl1.SuspendLayout();
@@ -98,6 +99,7 @@
 			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox1.Controls.Add(this.btnExport);
 			this.groupBox1.Controls.Add(this.label4);
 			this.groupBox1.Controls.Add(this.cbTrackB);
 			this.groupBox1.Controls.Add(this.ddlEventName);
@@ -249,6 +251,17 @@
 			this.tabPage2.Text = "Reference";
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
+			// btnExport
+			// 
+			this.btnExport.Enabled = false;
+			this.btnExport.Location = new System.Drawing.Point(253, 14);
+			this.btnExport.Name = "btnExport";
+			this.btnExport.Size = new System.Drawing.Size(75, 23);
+			this.btnExport.TabIndex = 107;
+			this.btnExport.Text = "Export";
+			this.btnExport.UseVisualStyleBackColor = true;
+			this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+			// 
 			// frmBatCatTracks
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +302,7 @@
 		private System.Windows.Forms.TabControl tabControl1;
 		private System.Windows.Forms.TabPage tabPage1;
 		private System.Windows.Forms.TabPage tabPage2;
+		private System.Windows.Forms.Button btnExport;
 	}
 }
 
