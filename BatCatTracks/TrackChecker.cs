@@ -146,7 +146,7 @@ namespace BatCatTracks
 		{
 			// 160 = normal almighties
 			// 154 = ultrasouls
-			// 173 = ultrafest
+			// 173 = epicfest
 			// 168 = uberfest
 			// 167 = air
 			// 166 = red
@@ -199,7 +199,7 @@ namespace BatCatTracks
 			evt = new GatchaEvent
 			{
 				Id = 173,
-				Name = "Ultrafest",
+				Name = "Epicfest",
 				RarityRate = Uberfest
 			};
 			evt.Units = EventUnits[evt.Id];

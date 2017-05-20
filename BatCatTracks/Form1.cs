@@ -113,7 +113,7 @@ namespace BatCatTracks
 			gatcha = checker.Events.First(g => g.Id == 168);
 			var uberfest = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
 			gatcha = checker.Events.First(g => g.Id == 173);
-			var ultrafest = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
+			var epicfest = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
 
 			var table = new List<GatchaRow>();
 
@@ -141,19 +141,19 @@ namespace BatCatTracks
 				}
 				if (almighties[i].Name != uberfest[i].Name)
 				{
-					row.UBUnit = uberfest[i].Name;
-					row.UBR = RarityToPips(uberfest[i].Rarity);
+					row.UFUnit = uberfest[i].Name;
+					row.UFR = RarityToPips(uberfest[i].Rarity);
 				}
-				if (almighties[i].Name != ultrafest[i].Name)
+				if (almighties[i].Name != epicfest[i].Name)
 				{
-					row.ULUnit = ultrafest[i].Name;
-					row.ULR = RarityToPips(ultrafest[i].Rarity);
+					row.EFUnit = epicfest[i].Name;
+					row.EFR = RarityToPips(epicfest[i].Rarity);
 				}
 
 				table.Add(row);
 
 				exportRow = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}",
-					i, row.Seed, row.NormUnit, row.NR, row.USUnit, row.USR, row.RBUnit, row.RBR, row.ABUnit, row.ABR, row.UBUnit, row.UBR, row.ULUnit, row.ULR);
+					i, row.Seed, row.NormUnit, row.NR, row.USUnit, row.USR, row.RBUnit, row.RBR, row.ABUnit, row.ABR, row.UFUnit, row.UFR, row.EFUnit, row.EFR);
 				export.Add(exportRow);
 			}
 			btnExport.Enabled = true;
@@ -174,10 +174,10 @@ namespace BatCatTracks
 			public string RBR { get; set; }
 			public string ABUnit { get; set; }
 			public string ABR { get; set; }
-			public string UBUnit { get; set; }
-			public string UBR { get; set; }
-			public string ULUnit { get; set; }
-			public string ULR { get; set; }
+			public string UFUnit { get; set; }
+			public string UFR { get; set; }
+			public string EFUnit { get; set; }
+			public string EFR { get; set; }
 		}
 
 		private string RarityToPips(Rarity r)
