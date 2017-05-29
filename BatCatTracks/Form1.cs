@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,6 +23,8 @@ namespace BatCatTracks
 		public frmBatCatTracks()
 		{
 			InitializeComponent();
+
+			DoubleBufferDGV();
 
 			LoadSettings();
 
@@ -41,6 +44,16 @@ namespace BatCatTracks
 
 			seedCalc = new frmSeedCalculator(checker);
 			seedCalc.SeedUpdater = i => tbSeed.Text = i.ToString();
+		}
+
+		private void DoubleBufferDGV()
+		{
+			typeof(DataGridView).InvokeMember(
+			   "DoubleBuffered",
+			   BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.SetProperty,
+			   null,
+			   dgvPullList,
+			   new object[] { true });
 		}
 
 		private void LoadSettings()

@@ -33,6 +33,7 @@
 			this.tbEventsToGet = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.btnExport = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
 			this.cbTrackB = new System.Windows.Forms.CheckBox();
 			this.ddlEventName = new System.Windows.Forms.ComboBox();
@@ -46,7 +47,6 @@
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.btnExport = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvPullList)).BeginInit();
 			this.tabControl1.SuspendLayout();
@@ -78,7 +78,7 @@
 			// 
 			// tbEventsToGet
 			// 
-			this.tbEventsToGet.Location = new System.Drawing.Point(414, 46);
+			this.tbEventsToGet.Location = new System.Drawing.Point(521, 43);
 			this.tbEventsToGet.Name = "tbEventsToGet";
 			this.tbEventsToGet.Size = new System.Drawing.Size(108, 20);
 			this.tbEventsToGet.TabIndex = 0;
@@ -87,7 +87,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(373, 49);
+			this.label1.Location = new System.Drawing.Point(480, 46);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(35, 13);
 			this.label1.TabIndex = 3;
@@ -120,10 +120,21 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Get Pulls";
 			// 
+			// btnExport
+			// 
+			this.btnExport.Enabled = false;
+			this.btnExport.Location = new System.Drawing.Point(253, 14);
+			this.btnExport.Name = "btnExport";
+			this.btnExport.Size = new System.Drawing.Size(75, 23);
+			this.btnExport.TabIndex = 107;
+			this.btnExport.Text = "Export";
+			this.btnExport.UseVisualStyleBackColor = true;
+			this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(374, 22);
+			this.label4.Location = new System.Drawing.Point(481, 19);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(30, 13);
 			this.label4.TabIndex = 106;
@@ -153,7 +164,7 @@
 			// 
 			this.ddlRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.ddlRate.FormattingEnabled = true;
-			this.ddlRate.Location = new System.Drawing.Point(413, 19);
+			this.ddlRate.Location = new System.Drawing.Point(520, 16);
 			this.ddlRate.Name = "ddlRate";
 			this.ddlRate.Size = new System.Drawing.Size(108, 21);
 			this.ddlRate.TabIndex = 103;
@@ -250,17 +261,6 @@
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Reference";
 			this.tabPage2.UseVisualStyleBackColor = true;
-			// 
-			// btnExport
-			// 
-			this.btnExport.Enabled = false;
-			this.btnExport.Location = new System.Drawing.Point(253, 14);
-			this.btnExport.Name = "btnExport";
-			this.btnExport.Size = new System.Drawing.Size(75, 23);
-			this.btnExport.TabIndex = 107;
-			this.btnExport.Text = "Export";
-			this.btnExport.UseVisualStyleBackColor = true;
-			this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
 			// 
 			// frmBatCatTracks
 			// 
