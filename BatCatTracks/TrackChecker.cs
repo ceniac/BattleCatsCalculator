@@ -281,9 +281,9 @@ namespace BatCatTracks
 			return bestSeed;
 		}
 
-		public List<Unit> GetUnits(int seed, int count, List<Unit> eventUnits, List<RarityRange> rarities, bool swapTracks = false)
+		public List<Unit> GetUnits(int seed, int count, List<Unit> eventUnits, List<RarityRange> rarities, PullMode mode = PullMode.Normal)
 		{
-			if (swapTracks)
+			if (mode == PullMode.TrackB)
 				seed = UpdateSeed(seed);
 
 			var result = new List<Unit>();
@@ -292,9 +292,20 @@ namespace BatCatTracks
 			int oldSeed;
 			for (int i = 0; i < count; i++)
 			{
-				oldSeed = seed;
-				result.Add(new Unit(GetNextUnit(ref seed, mapping, rarityDict)));
-				result[i].Seed = oldSeed;
+				if (mode != PullMode.Guaranteed || i < 10)
+				{
+					oldSeed = seed;
+					result.Add(new Unit(GetNextUnit(ref seed, mapping, rarityDict)));
+					result[i].Seed = oldSeed;
+				}
+				else
+				{
+					oldSeed = seed;
+					seed = UpdateSeed(seed);
+					result.Add(new Unit(GetUnit(seed, Rarity.UberRare, rarityDict)));
+					seed = UpdateSeed(seed);
+					result[i].Seed = oldSeed;
+				}
 			}
 
 			return result;

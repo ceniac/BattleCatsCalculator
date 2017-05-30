@@ -94,6 +94,8 @@ namespace BatCatTracks
 					tbOutput.Text += line + Environment.NewLine;
 				}
 			}
+
+			ddlPullModifier.SelectedIndex = 0;
 		}
 
 		private void btnGetPulls_Click(object sender, EventArgs e)
@@ -116,17 +118,17 @@ namespace BatCatTracks
 			string exportRow = "Row,Seed,NormalUnit,Rarity,UltraSouls,Rarity,RedBusters,Rarity,AirBusters,Rarity,UberFest,Rarity,UltraFest,Rarity";
 			export.Add(exportRow);
 			var gatcha = checker.Events.First(g => g.Id == 160);
-			var almighties = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
+			var almighties = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
 			gatcha = checker.Events.First(g => g.Id == 154);
-			var ultrasouls = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
+			var ultrasouls = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
 			gatcha = checker.Events.First(g => g.Id == 166);
-			var redbusters = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
+			var redbusters = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
 			gatcha = checker.Events.First(g => g.Id == 167);
-			var airbusters = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
+			var airbusters = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
 			gatcha = checker.Events.First(g => g.Id == 168);
-			var uberfest = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
+			var uberfest = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
 			gatcha = checker.Events.First(g => g.Id == 173);
-			var epicfest = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, cbTrackB.Checked);
+			var epicfest = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
 
 			var table = new List<GatchaRow>();
 
@@ -231,6 +233,11 @@ namespace BatCatTracks
 		private GatchaEvent SelectedEvent
 		{
 			get { return checker.Events.FirstOrDefault(g => g.Name == (string)ddlEventName.SelectedItem); }
+		}
+
+		private PullMode CurrentPullMode
+		{
+			get { return (PullMode)ddlPullModifier.SelectedIndex; }
 		}
 
 		private void OnExit(object sender, FormClosingEventArgs e)
