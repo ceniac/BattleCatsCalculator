@@ -117,17 +117,17 @@ namespace BatCatTracks
 
 			string exportRow = "Row,Seed,NormalUnit,Rarity,UltraSouls,Rarity,RedBusters,Rarity,AirBusters,Rarity,UberFest,Rarity,UltraFest,Rarity";
 			export.Add(exportRow);
-			var gatcha = checker.Events.First(g => g.Id == 160);
+			var gatcha = checker.Events.First(g => g.Id == Constants.Almighties);
 			var almighties = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
-			gatcha = checker.Events.First(g => g.Id == 154);
+			gatcha = checker.Events.First(g => g.Id == Constants.UltraSouls);
 			var ultrasouls = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
-			gatcha = checker.Events.First(g => g.Id == 166);
+			gatcha = checker.Events.First(g => g.Id == Constants.RedBusters);
 			var redbusters = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
-			gatcha = checker.Events.First(g => g.Id == 167);
+			gatcha = checker.Events.First(g => g.Id == Constants.AirBusters);
 			var airbusters = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
-			gatcha = checker.Events.First(g => g.Id == 168);
+			gatcha = checker.Events.First(g => g.Id == Constants.UberFest);
 			var uberfest = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
-			gatcha = checker.Events.First(g => g.Id == 173);
+			gatcha = checker.Events.First(g => g.Id == Constants.EpicFest);
 			var epicfest = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
 
 			var table = new List<GatchaRow>();

@@ -144,16 +144,9 @@ namespace BatCatTracks
 
 		private void SetupCommonEvents()
 		{
-			// 160 = normal almighties
-			// 154 = ultrasouls
-			// 173 = epicfest
-			// 168 = uberfest
-			// 167 = air
-			// 166 = red
-
 			GatchaEvent evt = new GatchaEvent
 			{
-				Id = 160,
+				Id = Constants.Almighties,
 				Name = "Almighties",
 				RarityRate = FivePercent
 			};
@@ -162,7 +155,7 @@ namespace BatCatTracks
 
 			evt = new GatchaEvent
 			{
-				Id = 154,
+				Id = Constants.UltraSouls,
 				Name = "Ultra Souls",
 				RarityRate = FivePercent
 			};
@@ -171,7 +164,7 @@ namespace BatCatTracks
 
 			evt = new GatchaEvent
 			{
-				Id = 166,
+				Id = Constants.RedBusters,
 				Name = "Red Busters",
 				RarityRate = FivePercent
 			};
@@ -180,7 +173,7 @@ namespace BatCatTracks
 
 			evt = new GatchaEvent
 			{
-				Id = 167,
+				Id = Constants.AirBusters,
 				Name = "Air Busters",
 				RarityRate = FivePercent
 			};
@@ -189,7 +182,7 @@ namespace BatCatTracks
 
 			evt = new GatchaEvent
 			{
-				Id = 168,
+				Id = Constants.UberFest,
 				Name = "Uberfest",
 				RarityRate = Uberfest
 			};
@@ -198,7 +191,7 @@ namespace BatCatTracks
 
 			evt = new GatchaEvent
 			{
-				Id = 173,
+				Id = Constants.EpicFest,
 				Name = "Epicfest",
 				RarityRate = Uberfest
 			};
