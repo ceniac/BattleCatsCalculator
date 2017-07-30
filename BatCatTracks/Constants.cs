@@ -32,7 +32,7 @@ namespace BatCatTracks
 	{
 		public static readonly int Nekoluga = 139;
 		public static readonly int Dynamites = 142;
-		public static readonly int GalaxyGals = 148;
+		public static readonly int GalaxyGals = 185; //148 in 6.1
 		public static readonly int DragonEmps = 151;
 		public static readonly int DarkHeroes = 157;
 		public static readonly int Almighties = 160;
