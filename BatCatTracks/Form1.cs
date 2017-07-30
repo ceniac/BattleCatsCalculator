@@ -96,6 +96,56 @@ namespace BatCatTracks
 			}
 
 			ddlPullModifier.SelectedIndex = 0;
+
+			var equiv = new List<List<string>>();
+
+			AddUnits(equiv, Constants.Dynamites);
+			AddUnits(equiv, Constants.Nekoluga);
+			AddUnits(equiv, Constants.Vajiras);
+			AddUnits(equiv, Constants.GalaxyGals);
+			AddUnits(equiv, Constants.DragonEmps);
+			AddUnits(equiv, Constants.UltraSouls);
+			AddUnits(equiv, Constants.DarkHeroes);
+			AddUnits(equiv, Constants.Almighties);
+			AddUnits(equiv, Constants.IronLegion);
+			AddUnits(equiv, Constants.GirlsMons);
+			
+			for (int i = 0; i < 7; i++)
+			{
+				List<string> row = new List<string>();
+				equiv.ForEach(e => row.Add(e[i]));
+				dgvEquivalents.Rows.Add(row.ToArray());
+			}
+
+			dgvEquivalents.AutoResizeColumns();
+
+#if !DEBUG
+			tabControl1.TabPages.Remove(tabReference);
+#endif
+		}
+
+		private void AddUnits(List<List<string>> equiv, int eventId)
+		{
+			List<string> units = new List<string>();
+			checker.EventUnits[eventId].ForEach(u => { if (u.Rarity == Rarity.UberRare) units.Add(u.Name); });
+			units.Reverse();
+
+			if (units.Count == 3)
+			{
+				units.Add(units[0]);
+				units.Add(units[1]);
+				units.Add(units[2]);
+			}
+
+			if (units.Count < 7)
+			{
+				for (int i = 0; i < 7 - units.Count; i++)
+				{
+					units.Add(null);
+				}
+			}
+
+			equiv.Add(units);
 		}
 
 		private void btnGetPulls_Click(object sender, EventArgs e)

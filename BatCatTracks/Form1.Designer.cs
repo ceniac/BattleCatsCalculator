@@ -33,6 +33,7 @@
 			this.tbEventsToGet = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.ddlPullModifier = new System.Windows.Forms.ComboBox();
 			this.btnExport = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
 			this.ddlEventName = new System.Windows.Forms.ComboBox();
@@ -44,14 +45,27 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.dgvPullList = new System.Windows.Forms.DataGridView();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
-			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.ddlPullModifier = new System.Windows.Forms.ComboBox();
+			this.tabTracks = new System.Windows.Forms.TabPage();
+			this.tabReference = new System.Windows.Forms.TabPage();
+			this.tabEquivUnits = new System.Windows.Forms.TabPage();
+			this.dgvEquivalents = new System.Windows.Forms.DataGridView();
+			this.dgcDynamites = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dgcNekoluga = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Vajiras = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dgcGalaxyGal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.DragonEmps = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dgcUltraSouls = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dgcDarkHeroes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dgcAlmighties = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dgcIronLegion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dgcGirlsMons = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvPullList)).BeginInit();
 			this.tabControl1.SuspendLayout();
-			this.tabPage1.SuspendLayout();
-			this.tabPage2.SuspendLayout();
+			this.tabTracks.SuspendLayout();
+			this.tabReference.SuspendLayout();
+			this.tabEquivUnits.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvEquivalents)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tbOutput
@@ -119,6 +133,19 @@
 			this.groupBox1.TabIndex = 4;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Get Pulls";
+			// 
+			// ddlPullModifier
+			// 
+			this.ddlPullModifier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.ddlPullModifier.FormattingEnabled = true;
+			this.ddlPullModifier.Items.AddRange(new object[] {
+            "Normal",
+            "Track B",
+            "Guaranteed"});
+			this.ddlPullModifier.Location = new System.Drawing.Point(172, 42);
+			this.ddlPullModifier.Name = "ddlPullModifier";
+			this.ddlPullModifier.Size = new System.Drawing.Size(121, 21);
+			this.ddlPullModifier.TabIndex = 108;
 			// 
 			// btnExport
 			// 
@@ -223,48 +250,123 @@
 			this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.tabControl1.Controls.Add(this.tabPage1);
-			this.tabControl1.Controls.Add(this.tabPage2);
+			this.tabControl1.Controls.Add(this.tabTracks);
+			this.tabControl1.Controls.Add(this.tabReference);
+			this.tabControl1.Controls.Add(this.tabEquivUnits);
 			this.tabControl1.Location = new System.Drawing.Point(3, 3);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
 			this.tabControl1.Size = new System.Drawing.Size(1163, 762);
 			this.tabControl1.TabIndex = 101;
 			// 
-			// tabPage1
+			// tabTracks
 			// 
-			this.tabPage1.Controls.Add(this.groupBox1);
-			this.tabPage1.Location = new System.Drawing.Point(4, 22);
-			this.tabPage1.Name = "tabPage1";
-			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(1155, 736);
-			this.tabPage1.TabIndex = 0;
-			this.tabPage1.Text = "Tracks";
-			this.tabPage1.UseVisualStyleBackColor = true;
+			this.tabTracks.Controls.Add(this.groupBox1);
+			this.tabTracks.Location = new System.Drawing.Point(4, 22);
+			this.tabTracks.Name = "tabTracks";
+			this.tabTracks.Padding = new System.Windows.Forms.Padding(3);
+			this.tabTracks.Size = new System.Drawing.Size(1155, 736);
+			this.tabTracks.TabIndex = 0;
+			this.tabTracks.Text = "Tracks";
+			this.tabTracks.UseVisualStyleBackColor = true;
 			// 
-			// tabPage2
+			// tabReference
 			// 
-			this.tabPage2.Controls.Add(this.tbOutput);
-			this.tabPage2.Location = new System.Drawing.Point(4, 22);
-			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(1155, 736);
-			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "Reference";
-			this.tabPage2.UseVisualStyleBackColor = true;
+			this.tabReference.Controls.Add(this.tbOutput);
+			this.tabReference.Location = new System.Drawing.Point(4, 22);
+			this.tabReference.Name = "tabReference";
+			this.tabReference.Padding = new System.Windows.Forms.Padding(3);
+			this.tabReference.Size = new System.Drawing.Size(1155, 736);
+			this.tabReference.TabIndex = 1;
+			this.tabReference.Text = "Reference";
+			this.tabReference.UseVisualStyleBackColor = true;
 			// 
-			// ddlPullModifier
+			// tabEquivUnits
 			// 
-			this.ddlPullModifier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.ddlPullModifier.FormattingEnabled = true;
-			this.ddlPullModifier.Items.AddRange(new object[] {
-            "Normal",
-            "Track B",
-            "Guaranteed"});
-			this.ddlPullModifier.Location = new System.Drawing.Point(172, 42);
-			this.ddlPullModifier.Name = "ddlPullModifier";
-			this.ddlPullModifier.Size = new System.Drawing.Size(121, 21);
-			this.ddlPullModifier.TabIndex = 108;
+			this.tabEquivUnits.Controls.Add(this.dgvEquivalents);
+			this.tabEquivUnits.Location = new System.Drawing.Point(4, 22);
+			this.tabEquivUnits.Name = "tabEquivUnits";
+			this.tabEquivUnits.Size = new System.Drawing.Size(1155, 736);
+			this.tabEquivUnits.TabIndex = 2;
+			this.tabEquivUnits.Text = "Unit Equivalents";
+			this.tabEquivUnits.UseVisualStyleBackColor = true;
+			// 
+			// dgvEquivalents
+			// 
+			this.dgvEquivalents.AllowUserToAddRows = false;
+			this.dgvEquivalents.AllowUserToDeleteRows = false;
+			this.dgvEquivalents.AllowUserToResizeRows = false;
+			this.dgvEquivalents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvEquivalents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgcDynamites,
+            this.dgcNekoluga,
+            this.Vajiras,
+            this.dgcGalaxyGal,
+            this.DragonEmps,
+            this.dgcUltraSouls,
+            this.dgcDarkHeroes,
+            this.dgcAlmighties,
+            this.dgcIronLegion,
+            this.dgcGirlsMons});
+			this.dgvEquivalents.Location = new System.Drawing.Point(3, 3);
+			this.dgvEquivalents.Name = "dgvEquivalents";
+			this.dgvEquivalents.Size = new System.Drawing.Size(1145, 544);
+			this.dgvEquivalents.TabIndex = 0;
+			// 
+			// dgcDynamites
+			// 
+			this.dgcDynamites.HeaderText = "Dynamites";
+			this.dgcDynamites.Name = "dgcDynamites";
+			// 
+			// dgcNekoluga
+			// 
+			this.dgcNekoluga.HeaderText = "Nekoluga";
+			this.dgcNekoluga.Name = "dgcNekoluga";
+			this.dgcNekoluga.Width = 70;
+			// 
+			// Vajiras
+			// 
+			this.Vajiras.HeaderText = "Wargod Vajiras";
+			this.Vajiras.Name = "Vajiras";
+			this.Vajiras.Width = 110;
+			// 
+			// dgcGalaxyGal
+			// 
+			this.dgcGalaxyGal.HeaderText = "Galaxy Gals";
+			this.dgcGalaxyGal.Name = "dgcGalaxyGal";
+			this.dgcGalaxyGal.Width = 90;
+			// 
+			// DragonEmps
+			// 
+			this.DragonEmps.HeaderText = "Dragon Emps";
+			this.DragonEmps.Name = "DragonEmps";
+			this.DragonEmps.Width = 95;
+			// 
+			// dgcUltraSouls
+			// 
+			this.dgcUltraSouls.HeaderText = "Ultra Souls";
+			this.dgcUltraSouls.Name = "dgcUltraSouls";
+			// 
+			// dgcDarkHeroes
+			// 
+			this.dgcDarkHeroes.HeaderText = "Dark Heroes";
+			this.dgcDarkHeroes.Name = "dgcDarkHeroes";
+			// 
+			// dgcAlmighties
+			// 
+			this.dgcAlmighties.HeaderText = "Almighties";
+			this.dgcAlmighties.Name = "dgcAlmighties";
+			this.dgcAlmighties.Width = 105;
+			// 
+			// dgcIronLegion
+			// 
+			this.dgcIronLegion.HeaderText = "Iron Legion";
+			this.dgcIronLegion.Name = "dgcIronLegion";
+			// 
+			// dgcGirlsMons
+			// 
+			this.dgcGirlsMons.HeaderText = "Girls Mons";
+			this.dgcGirlsMons.Name = "dgcGirlsMons";
 			// 
 			// frmBatCatTracks
 			// 
@@ -279,9 +381,11 @@
 			this.groupBox1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvPullList)).EndInit();
 			this.tabControl1.ResumeLayout(false);
-			this.tabPage1.ResumeLayout(false);
-			this.tabPage2.ResumeLayout(false);
-			this.tabPage2.PerformLayout();
+			this.tabTracks.ResumeLayout(false);
+			this.tabReference.ResumeLayout(false);
+			this.tabReference.PerformLayout();
+			this.tabEquivUnits.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgvEquivalents)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -303,10 +407,22 @@
 		private System.Windows.Forms.ComboBox ddlEventName;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.TabControl tabControl1;
-		private System.Windows.Forms.TabPage tabPage1;
-		private System.Windows.Forms.TabPage tabPage2;
+		private System.Windows.Forms.TabPage tabTracks;
+		private System.Windows.Forms.TabPage tabReference;
 		private System.Windows.Forms.Button btnExport;
 		private System.Windows.Forms.ComboBox ddlPullModifier;
+		private System.Windows.Forms.TabPage tabEquivUnits;
+		private System.Windows.Forms.DataGridView dgvEquivalents;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dgcDynamites;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dgcNekoluga;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Vajiras;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dgcGalaxyGal;
+		private System.Windows.Forms.DataGridViewTextBoxColumn DragonEmps;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dgcUltraSouls;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dgcDarkHeroes;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dgcAlmighties;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dgcIronLegion;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dgcGirlsMons;
 	}
 }
 
