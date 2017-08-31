@@ -164,6 +164,15 @@ namespace BatCatTracks
 
 			evt = new GatchaEvent
 			{
+				Id = Constants.IronLegion,
+				Name = "Iron Legion",
+				RarityRate = FivePercent
+			};
+			evt.Units = EventUnits[evt.Id];
+			Events.Add(evt);
+
+			evt = new GatchaEvent
+			{
 				Id = Constants.RedBusters,
 				Name = "Red Busters",
 				RarityRate = FivePercent

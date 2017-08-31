@@ -139,7 +139,8 @@ namespace BatCatTracks
 
 			if (units.Count < 7)
 			{
-				for (int i = 0; i < 7 - units.Count; i++)
+				int toAdd = 7 - units.Count;
+				for (int i = 0; i < toAdd; i++)
 				{
 					units.Add(null);
 				}
