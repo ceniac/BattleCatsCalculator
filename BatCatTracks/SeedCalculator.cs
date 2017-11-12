@@ -88,7 +88,7 @@ namespace BatCatTracks
 			System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
 			stopwatch.Start();
 
-			int seed = await checker.FindSeedAsync(knownUnits, currentUnits, checker.FivePercent);
+			int seed = await checker.FindSeedAsync(knownUnits, currentUnits, GatchaSets.Instance.RarityRates["Five"]);
 
 			stopwatch.Stop();
 

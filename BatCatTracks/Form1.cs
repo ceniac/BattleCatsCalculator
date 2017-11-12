@@ -30,13 +30,19 @@ namespace BatCatTracks
 
 			PopulateStuff();
 
-			foreach (string name in checker.RarityRates.Keys)
+			foreach (string name in GatchaSets.Instance.RarityRates.Keys)
 			{
 				ddlRate.Items.Add(name);
 			}
 			ddlRate.SelectedIndex = 1;
 
-			foreach (var evt in checker.Events)
+			foreach (GatchaEvent evt in GatchaSets.Instance.Events.Where(e => e.IsRegular).OrderBy(e => e.Name))
+			{
+				ddlGatchaSet.Items.Add(evt.Name);
+			}
+			ddlGatchaSet.SelectedIndex = 0;
+
+			foreach (var evt in GatchaSets.Instance.Events)
 			{
 				ddlEventName.Items.Add(evt.Name);
 			}
@@ -71,16 +77,16 @@ namespace BatCatTracks
 
 		private void PopulateStuff()
 		{
-			foreach (var evt in checker.EventUnits.Keys)
+			foreach (var evt in GatchaSets.Instance.EventUnits.Keys)
 			{
-				var list = checker.EventUnits[evt];
+				var list = GatchaSets.Instance.EventUnits[evt];
 
 				string ubers = string.Empty;
 				string supers = string.Empty;
 
 				foreach (var u in list)
 				{
-					if (u.Rarity == Models.Rarity.UberRare)
+					if (u.Rarity == Rarity.UberRare)
 						ubers += (ubers == string.Empty ? string.Empty : ", ") + u.Name;
 					else
 						supers += (supers == string.Empty ? string.Empty : ", ") + u.Name;
@@ -109,7 +115,8 @@ namespace BatCatTracks
 			AddUnits(equiv, Constants.Almighties);
 			AddUnits(equiv, Constants.IronLegion);
 			AddUnits(equiv, Constants.GirlsMons);
-			
+			AddUnits(equiv, Constants.Elementals);
+
 			for (int i = 0; i < 7; i++)
 			{
 				List<string> row = new List<string>();
@@ -127,7 +134,7 @@ namespace BatCatTracks
 		private void AddUnits(List<List<string>> equiv, int eventId)
 		{
 			List<string> units = new List<string>();
-			checker.EventUnits[eventId].ForEach(u => { if (u.Rarity == Rarity.UberRare) units.Add(u.Name); });
+			GatchaSets.Instance.EventUnits[eventId].ForEach(u => { if (u.Rarity == Rarity.UberRare) units.Add(u.Name); });
 			units.Reverse();
 
 			if (units.Count == 3)
@@ -166,19 +173,19 @@ namespace BatCatTracks
 
 			export = new List<string>();
 
-			string exportRow = "Row,Seed,NormalUnit,Rarity,UltraSouls,Rarity,RedBusters,Rarity,AirBusters,Rarity,UberFest,Rarity,UltraFest,Rarity";
+			var curRate = GatchaSets.Instance.RarityRates[ddlRate.SelectedItem.ToString()];
+
+			string exportRow = "Row,Seed,NormalUnit,Rarity,RedBusters,Rarity,AirBusters,Rarity,UberFest,Rarity,UltraFest,Rarity";
 			export.Add(exportRow);
-			var gatcha = checker.Events.First(g => g.Id == Constants.Almighties);
-			var almighties = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
-			gatcha = checker.Events.First(g => g.Id == Constants.UltraSouls);
-			var ultrasouls = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
-			gatcha = checker.Events.First(g => g.Id == Constants.RedBusters);
+			var gatcha = GatchaSets.Instance.Events.First(u => u.Name == ddlGatchaSet.SelectedItem.ToString());
+			var selectedSet = checker.GetUnits(seed, pullCount, gatcha.Units, curRate, CurrentPullMode);
+			gatcha = GatchaSets.Instance.Events.First(g => g.Id == Constants.RedBusters);
 			var redbusters = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
-			gatcha = checker.Events.First(g => g.Id == Constants.AirBusters);
+			gatcha = GatchaSets.Instance.Events.First(g => g.Id == Constants.AirBusters);
 			var airbusters = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
-			gatcha = checker.Events.First(g => g.Id == Constants.UberFest);
+			gatcha = GatchaSets.Instance.Events.First(g => g.Id == Constants.UberFest);
 			var uberfest = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
-			gatcha = checker.Events.First(g => g.Id == Constants.EpicFest);
+			gatcha = GatchaSets.Instance.Events.First(g => g.Id == Constants.EpicFest);
 			var epicfest = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
 
 			var table = new List<GatchaRow>();
@@ -187,30 +194,25 @@ namespace BatCatTracks
 			{
 				var row = new GatchaRow();
 				row.Count = i;
-				row.Seed = almighties[i].Seed;
-				row.NormUnit = almighties[i].Name;
-				row.NR = RarityToPips(almighties[i].Rarity);
-				if (almighties[i].Name != ultrasouls[i].Name)
-				{
-					row.USUnit = ultrasouls[i].Name;
-					row.USR = RarityToPips(ultrasouls[i].Rarity);
-				}
-				if (almighties[i].Name != redbusters[i].Name)
+				row.Seed = selectedSet[i].Seed;
+				row.NormUnit = selectedSet[i].Name;
+				row.NR = RarityToPips(selectedSet[i].Rarity);
+				if (selectedSet[i].Name != redbusters[i].Name)
 				{
 					row.RBUnit = redbusters[i].Name;
 					row.RBR = RarityToPips(redbusters[i].Rarity);
 				}
-				if (almighties[i].Name != airbusters[i].Name)
+				if (selectedSet[i].Name != airbusters[i].Name)
 				{
 					row.ABUnit = airbusters[i].Name;
 					row.ABR = RarityToPips(airbusters[i].Rarity);
 				}
-				if (almighties[i].Name != uberfest[i].Name)
+				if (selectedSet[i].Name != uberfest[i].Name)
 				{
 					row.UFUnit = uberfest[i].Name;
 					row.UFR = RarityToPips(uberfest[i].Rarity);
 				}
-				if (almighties[i].Name != epicfest[i].Name)
+				if (selectedSet[i].Name != epicfest[i].Name)
 				{
 					row.EFUnit = epicfest[i].Name;
 					row.EFR = RarityToPips(epicfest[i].Rarity);
@@ -218,8 +220,8 @@ namespace BatCatTracks
 
 				table.Add(row);
 
-				exportRow = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}",
-					i, row.Seed, row.NormUnit, row.NR, row.USUnit, row.USR, row.RBUnit, row.RBR, row.ABUnit, row.ABR, row.UFUnit, row.UFR, row.EFUnit, row.EFR);
+				exportRow = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}",
+					i, row.Seed, row.NormUnit, row.NR, row.RBUnit, row.RBR, row.ABUnit, row.ABR, row.UFUnit, row.UFR, row.EFUnit, row.EFR);
 				export.Add(exportRow);
 			}
 			btnExport.Enabled = true;
@@ -234,8 +236,6 @@ namespace BatCatTracks
 			public int Seed { get; set; }
 			public string NormUnit { get; set; }
 			public string NR { get; set; }
-			public string USUnit { get; set; }
-			public string USR { get; set; }
 			public string RBUnit { get; set; }
 			public string RBR { get; set; }
 			public string ABUnit { get; set; }
@@ -283,7 +283,7 @@ namespace BatCatTracks
 
 		private GatchaEvent SelectedEvent
 		{
-			get { return checker.Events.FirstOrDefault(g => g.Name == (string)ddlEventName.SelectedItem); }
+			get { return GatchaSets.Instance.Events.FirstOrDefault(g => g.Name == (string)ddlEventName.SelectedItem); }
 		}
 
 		private PullMode CurrentPullMode

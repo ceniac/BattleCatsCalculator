@@ -12,5 +12,6 @@ namespace BatCatTracks.Models
 		public string Name;
 		public List<RarityRange> RarityRate;
 		public List<Unit> Units;
+		public bool IsRegular;
 	}
 }

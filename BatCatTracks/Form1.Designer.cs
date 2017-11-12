@@ -30,14 +30,10 @@
 		{
 			this.tbOutput = new System.Windows.Forms.TextBox();
 			this.btnGetPulls = new System.Windows.Forms.Button();
-			this.tbEventsToGet = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.ddlPullModifier = new System.Windows.Forms.ComboBox();
 			this.btnExport = new System.Windows.Forms.Button();
-			this.label4 = new System.Windows.Forms.Label();
 			this.ddlEventName = new System.Windows.Forms.ComboBox();
-			this.ddlRate = new System.Windows.Forms.ComboBox();
 			this.btnFindSeed = new System.Windows.Forms.Button();
 			this.tbSeed = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
@@ -59,6 +55,9 @@
 			this.dgcAlmighties = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dgcIronLegion = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dgcGirlsMons = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dgcElementals = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ddlRate = new System.Windows.Forms.ComboBox();
+			this.ddlGatchaSet = new System.Windows.Forms.ComboBox();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvPullList)).BeginInit();
 			this.tabControl1.SuspendLayout();
@@ -90,43 +89,23 @@
 			this.btnGetPulls.UseVisualStyleBackColor = true;
 			this.btnGetPulls.Click += new System.EventHandler(this.btnGetPulls_Click);
 			// 
-			// tbEventsToGet
-			// 
-			this.tbEventsToGet.Location = new System.Drawing.Point(521, 43);
-			this.tbEventsToGet.Name = "tbEventsToGet";
-			this.tbEventsToGet.Size = new System.Drawing.Size(108, 20);
-			this.tbEventsToGet.TabIndex = 0;
-			this.tbEventsToGet.Visible = false;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(480, 46);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(35, 13);
-			this.label1.TabIndex = 3;
-			this.label1.Text = "Event";
-			this.label1.Visible = false;
-			// 
 			// groupBox1
 			// 
 			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox1.Controls.Add(this.ddlGatchaSet);
+			this.groupBox1.Controls.Add(this.ddlRate);
 			this.groupBox1.Controls.Add(this.ddlPullModifier);
 			this.groupBox1.Controls.Add(this.btnExport);
-			this.groupBox1.Controls.Add(this.label4);
 			this.groupBox1.Controls.Add(this.ddlEventName);
-			this.groupBox1.Controls.Add(this.ddlRate);
 			this.groupBox1.Controls.Add(this.btnFindSeed);
 			this.groupBox1.Controls.Add(this.tbSeed);
 			this.groupBox1.Controls.Add(this.label3);
 			this.groupBox1.Controls.Add(this.tbPullCount);
 			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Controls.Add(this.dgvPullList);
-			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Controls.Add(this.btnGetPulls);
-			this.groupBox1.Controls.Add(this.tbEventsToGet);
 			this.groupBox1.Location = new System.Drawing.Point(6, 6);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(1142, 719);
@@ -158,16 +137,6 @@
 			this.btnExport.UseVisualStyleBackColor = true;
 			this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
 			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(481, 19);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(30, 13);
-			this.label4.TabIndex = 106;
-			this.label4.Text = "Rate";
-			this.label4.Visible = false;
-			// 
 			// ddlEventName
 			// 
 			this.ddlEventName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -177,16 +146,6 @@
 			this.ddlEventName.Name = "ddlEventName";
 			this.ddlEventName.Size = new System.Drawing.Size(144, 21);
 			this.ddlEventName.TabIndex = 104;
-			// 
-			// ddlRate
-			// 
-			this.ddlRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.ddlRate.FormattingEnabled = true;
-			this.ddlRate.Location = new System.Drawing.Point(520, 16);
-			this.ddlRate.Name = "ddlRate";
-			this.ddlRate.Size = new System.Drawing.Size(108, 21);
-			this.ddlRate.TabIndex = 103;
-			this.ddlRate.Visible = false;
 			// 
 			// btnFindSeed
 			// 
@@ -307,7 +266,8 @@
             this.dgcDarkHeroes,
             this.dgcAlmighties,
             this.dgcIronLegion,
-            this.dgcGirlsMons});
+            this.dgcGirlsMons,
+            this.dgcElementals});
 			this.dgvEquivalents.Location = new System.Drawing.Point(3, 3);
 			this.dgvEquivalents.Name = "dgvEquivalents";
 			this.dgvEquivalents.Size = new System.Drawing.Size(1145, 544);
@@ -368,6 +328,29 @@
 			this.dgcGirlsMons.HeaderText = "Girls Mons";
 			this.dgcGirlsMons.Name = "dgcGirlsMons";
 			// 
+			// dgcElementals
+			// 
+			this.dgcElementals.HeaderText = "Elementals";
+			this.dgcElementals.Name = "dgcElementals";
+			// 
+			// ddlRate
+			// 
+			this.ddlRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.ddlRate.FormattingEnabled = true;
+			this.ddlRate.Location = new System.Drawing.Point(358, 15);
+			this.ddlRate.Name = "ddlRate";
+			this.ddlRate.Size = new System.Drawing.Size(121, 21);
+			this.ddlRate.TabIndex = 109;
+			// 
+			// ddlGatchaSet
+			// 
+			this.ddlGatchaSet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.ddlGatchaSet.FormattingEnabled = true;
+			this.ddlGatchaSet.Location = new System.Drawing.Point(358, 43);
+			this.ddlGatchaSet.Name = "ddlGatchaSet";
+			this.ddlGatchaSet.Size = new System.Drawing.Size(121, 21);
+			this.ddlGatchaSet.TabIndex = 110;
+			// 
 			// frmBatCatTracks
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,8 +377,6 @@
 
 		private System.Windows.Forms.TextBox tbOutput;
 		private System.Windows.Forms.Button btnGetPulls;
-		private System.Windows.Forms.TextBox tbEventsToGet;
-		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.TextBox tbPullCount;
 		private System.Windows.Forms.Label label2;
@@ -403,9 +384,7 @@
 		private System.Windows.Forms.TextBox tbSeed;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button btnFindSeed;
-		private System.Windows.Forms.ComboBox ddlRate;
 		private System.Windows.Forms.ComboBox ddlEventName;
-		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.TabControl tabControl1;
 		private System.Windows.Forms.TabPage tabTracks;
 		private System.Windows.Forms.TabPage tabReference;
@@ -423,6 +402,9 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn dgcAlmighties;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dgcIronLegion;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dgcGirlsMons;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dgcElementals;
+		private System.Windows.Forms.ComboBox ddlRate;
+		private System.Windows.Forms.ComboBox ddlGatchaSet;
 	}
 }
 

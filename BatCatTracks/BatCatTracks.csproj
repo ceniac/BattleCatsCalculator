@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Models\GatchaEvent.cs" />
+    <Compile Include="Models\GatchaSets.cs" />
     <Compile Include="Models\PullMode.cs" />
     <Compile Include="Models\RarityRange.cs" />
     <Compile Include="Models\Unit.cs" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BatCatTracks.Models;
 
 namespace BatCatTracks
 {
@@ -38,6 +39,7 @@ namespace BatCatTracks
 		public static readonly int Almighties = 160;
 		public static readonly int IronLegion = 186; //163 in 6.1
 		public static readonly int GirlsMons = 175;
+		public static readonly int Elementals = 187;
 		public static readonly int UltraSouls = 154;
 		public static readonly int Vajiras = 177;
 		public static readonly int RedBusters = 166;
