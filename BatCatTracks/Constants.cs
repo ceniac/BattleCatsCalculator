@@ -38,7 +38,7 @@ namespace BatCatTracks
 		public static readonly int DarkHeroes = 157;
 		public static readonly int Almighties = 160;
 		public static readonly int IronLegion = 186; //163 in 6.1
-		public static readonly int GirlsMons = 175;
+		public static readonly int GirlsMons = 188; //175 pre 6.4
 		public static readonly int Elementals = 187;
 		public static readonly int UltraSouls = 154;
 		public static readonly int Vajiras = 177;

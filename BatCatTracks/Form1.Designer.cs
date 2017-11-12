@@ -31,6 +31,8 @@
 			this.tbOutput = new System.Windows.Forms.TextBox();
 			this.btnGetPulls = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.ddlGatchaSet = new System.Windows.Forms.ComboBox();
+			this.ddlRate = new System.Windows.Forms.ComboBox();
 			this.ddlPullModifier = new System.Windows.Forms.ComboBox();
 			this.btnExport = new System.Windows.Forms.Button();
 			this.ddlEventName = new System.Windows.Forms.ComboBox();
@@ -56,8 +58,6 @@
 			this.dgcIronLegion = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dgcGirlsMons = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dgcElementals = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.ddlRate = new System.Windows.Forms.ComboBox();
-			this.ddlGatchaSet = new System.Windows.Forms.ComboBox();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvPullList)).BeginInit();
 			this.tabControl1.SuspendLayout();
@@ -81,7 +81,7 @@
 			// 
 			// btnGetPulls
 			// 
-			this.btnGetPulls.Location = new System.Drawing.Point(172, 14);
+			this.btnGetPulls.Location = new System.Drawing.Point(290, 16);
 			this.btnGetPulls.Name = "btnGetPulls";
 			this.btnGetPulls.Size = new System.Drawing.Size(75, 23);
 			this.btnGetPulls.TabIndex = 3;
@@ -113,6 +113,24 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Get Pulls";
 			// 
+			// ddlGatchaSet
+			// 
+			this.ddlGatchaSet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.ddlGatchaSet.FormattingEnabled = true;
+			this.ddlGatchaSet.Location = new System.Drawing.Point(163, 43);
+			this.ddlGatchaSet.Name = "ddlGatchaSet";
+			this.ddlGatchaSet.Size = new System.Drawing.Size(121, 21);
+			this.ddlGatchaSet.TabIndex = 110;
+			// 
+			// ddlRate
+			// 
+			this.ddlRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.ddlRate.FormattingEnabled = true;
+			this.ddlRate.Location = new System.Drawing.Point(163, 15);
+			this.ddlRate.Name = "ddlRate";
+			this.ddlRate.Size = new System.Drawing.Size(121, 21);
+			this.ddlRate.TabIndex = 109;
+			// 
 			// ddlPullModifier
 			// 
 			this.ddlPullModifier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -121,15 +139,15 @@
             "Normal",
             "Track B",
             "Guaranteed"});
-			this.ddlPullModifier.Location = new System.Drawing.Point(172, 42);
+			this.ddlPullModifier.Location = new System.Drawing.Point(290, 44);
 			this.ddlPullModifier.Name = "ddlPullModifier";
-			this.ddlPullModifier.Size = new System.Drawing.Size(121, 21);
+			this.ddlPullModifier.Size = new System.Drawing.Size(156, 21);
 			this.ddlPullModifier.TabIndex = 108;
 			// 
 			// btnExport
 			// 
 			this.btnExport.Enabled = false;
-			this.btnExport.Location = new System.Drawing.Point(253, 14);
+			this.btnExport.Location = new System.Drawing.Point(371, 16);
 			this.btnExport.Name = "btnExport";
 			this.btnExport.Size = new System.Drawing.Size(75, 23);
 			this.btnExport.TabIndex = 107;
@@ -332,24 +350,6 @@
 			// 
 			this.dgcElementals.HeaderText = "Elementals";
 			this.dgcElementals.Name = "dgcElementals";
-			// 
-			// ddlRate
-			// 
-			this.ddlRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.ddlRate.FormattingEnabled = true;
-			this.ddlRate.Location = new System.Drawing.Point(358, 15);
-			this.ddlRate.Name = "ddlRate";
-			this.ddlRate.Size = new System.Drawing.Size(121, 21);
-			this.ddlRate.TabIndex = 109;
-			// 
-			// ddlGatchaSet
-			// 
-			this.ddlGatchaSet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.ddlGatchaSet.FormattingEnabled = true;
-			this.ddlGatchaSet.Location = new System.Drawing.Point(358, 43);
-			this.ddlGatchaSet.Name = "ddlGatchaSet";
-			this.ddlGatchaSet.Size = new System.Drawing.Size(121, 21);
-			this.ddlGatchaSet.TabIndex = 110;
 			// 
 			// frmBatCatTracks
 			// 
