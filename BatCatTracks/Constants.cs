@@ -45,6 +45,6 @@ namespace BatCatTracks
 		public static readonly int RedBusters = 166;
 		public static readonly int AirBusters = 167;
 		public static readonly int UberFest = 182;
-		public static readonly int EpicFest = 183;
+		public static readonly int EpicFest = 189; //183 pre 6.6
 	}
 }
