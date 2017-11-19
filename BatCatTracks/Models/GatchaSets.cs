@@ -88,12 +88,12 @@ namespace BatCatTracks.Models
 			AllUnits = new List<Unit>();
 			foreach (string line in lines)
 			{
-				var fields = line.Split(',');
+				var fields = line.Split('|');
 				if (fields != null && fields.Length >= 3)
 				{
-					var unit = new Unit { Id = int.Parse(fields[0]), Name = fields[1] };
+					var unit = new Unit { Id = int.Parse(fields[0]), Name = fields[2] };
 					Rarity rarity;
-					Enum.TryParse<Rarity>(fields[2], out rarity);
+					Enum.TryParse<Rarity>(fields[1], out rarity);
 					unit.Rarity = rarity;
 
 					AllUnits.Add(unit);

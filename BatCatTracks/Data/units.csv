@@ -1,240 +1,380 @@
-0,Cat,0,
-1,Tank Cat,0,
-2,Axe Cat,0,
-3,Gross Cat,0,
-4,Cow Cat,0,
-5,Bird Cat,0,
-6,Fish Cat,0,
-7,Lizard Cat,0,
-8,Titan Cat,0,
-9,Actress Cat,1,
-10,Kung Fu Cat,1,
-11,Mr.,1,
-12,Bondage Cat,1,
-13,Dom Cat,1,
-14,Cats in a Box,1,
-15,Panties Cat,1,
-16,Moneko,1,
-17,Tricycle Cat,1,
-18,Ninja Cat,1,
-19,Zombie Cat,1,
-20,Samurai Cat,1,
-21,Sumo Cat,1,
-22,Boogie Cat,1,
-23,Skirt Cat,1,
-24,Valkyrie Cat,1,
-25,Bahamut Cat,1,
-28,Capsule Cat,1,
-30,Bodhisattva Cat,3,
-31,Delinquent Cat,3,
-32,Hip Hop Cat,3,
-33,Kotatsu Cat,3,
-34,Nekoluga,4,
-35,Nerd Cat,3,
-36,Swimmer Cat,3,
-37,Pogo Cat,2,
-38,Wheel Cat,2,
-39,Apple Cat,3,
-40,Bath Cat,3,
-41,Salon Cat,2,
-42,Ice Cat,4,
-43,Cat Machine,4,
-44,Lesser Demon Cat,4,
-46,Jurassic Cat,2,
-47,Viking Cat,2,
-48,Pirate Cat,2,
-49,Thief Cat,2,
-50,Bishop Cat,2,
-51,Fortune Teller Cat,2,
-52,Shaman Cat,2,
-55,Witch Cat,2,
-56,Archer Cat,2,
-57,Marauder Cat,4,
-58,Swordsman Cat,2,
-59,Baby Cat,4,
-60,Bronze Cat,2,
-61,Sushi Cat,3,
-63,Sports Day Cat,2,
-70,Salaryman Cat,2,
-71,Sanada Yukimura,4,
-72,Maeda Keiji,4,
-73,Oda Nobunaga,4,
-74,Reindeer Fish Cat,2,
-75,Windy,4,
-76,Thundia,4,
-78,Space Cat,2,
-79,Adult Cat,2,
-80,Evil Cat,2,
-81,Doll Cats,2,
-83,Sodom,4,
-84,Megidora,4,
-85,Vars,4,
-86,Kamukura,4,
-87,Raiden,4,
-88,Rope Jump Cat,2,
-91,Crazed Cat,3,
-92,Crazed Tank Cat,3,
-93,Crazed Axe Cat,3,
-94,Crazed Gross Cat,3,
-95,Crazed Cow Cat,3,
-96,Crazed Bird Cat,3,
-97,Crazed Fish Cat,3,
-98,Crazed Lizard Cat,3,
-99,Crazed Titan Cat,3,
-100,Maiden Cat,2,
-104,Koi Cat,2,
-105,Kuu,4,
-106,Kai,4,
-107,Coppermine,4,
-108,Cat Bros,1,
-109,Madam Bride,2,
-122,Vacation Queen,2,
-123,Bean Cats,1,
-124,Date Masamune,4,
-125,Takeda Shingen,4,
-126,Clockwork Cat,2,
-127,Flower Cat,1,
-128,Vengeful Cat,2,
-129,Gold Cat,3,
-130,Ururun Wolf,1,
-131,Neneko,3,
-132,Kung Fu Cat X,2,
-134,Urashima Taro,4,
-135,The Grateful Crane,4,
-136,Momotaro,4,
-137,Kasa Jizo,4,
-138,Princess Kaguya,4,
-143,Nurse Cat,4,
-144,Cat Base Mini,3,
-145,Cat Gunslinger,2,
-146,Stilts Cat,2,
-147,Tin Cat,2,
-148,Rocker Cat,2,
-149,Mer-Cat,2,
-150,Juliet Cat,3,
-151,Weightlifter Cat,3,
-152,Figure Skating Cats,3,
-153,Cat Toaster,3,
-154,Hoop Cat,2,
-158,Uesugi Kenshin,4,
-159,Kalisa,4,
-168,Asiluga,4,
-169,Kubiluga,4,
-170,Tecoluga,4,
-171,Balaluga,4,
-172,Li'l Nyandam,1,
-173,Baby Mola,3,
-174,Mola King,4,
-175,Meowla Meowla,1,
-176,Marshmallow Cat,2,
-177,Dioramos,4,
-183,Cat Kart R,2,
-184,Mr. Ninja,1,
-194,Akira,4,
-195,Mekako Saionji,4,
-196,Catman,4,
-197,Psychocat,2,
-198,Onmyoji Cat,2,
-199,Surfer Cat,3,
-200,Metal Cat,3,
-201,Drumcorps Cat,2,
-203,Kachi-Kachi,4,
-209,Li'l Cat,1,
-210,Li'l Tank Cat,1,
-211,Li'l Axe Cat,1,
-212,The White Rabbit,4,
-213,Catburger,1,
-214,HYAKUTARO,2,
-215,MARCO,2,
-216,TARMA,2,
-217,ERI,2,
-218,FIO,2,
-219,SV-001,3,
-220,ALLEN O'NEIL,3,
-221,MARS PEOPLE,2,
-222,HUGE HERMIT,4,
-223,JUPITER KING,4,
-224,DONALD MORDEN,4,
-225,HI-DO,4,
-226,Warlock and Pierre,4,
-227,Pumpcat,2,
-228,Gloomy Neneko,3,
-229,Hallowindy,4,
-230,Spooky Thundia,4,
-237,Freshman Cat Jobs,3,
-238,Rich Cat III,3,
-239,Sniper the Recruit,3,
-240,Togeluga,4,
-241,Frosty Kai,4,
-242,Santa Kuu,4,
-243,Holy Coppermine,4,
-244,A Gift of Cats,2,
-245,Li'l Gross Cat,1,
-246,Li'l Cow Cat,1,
-247,Li'l Bird Cat,1,
-257,Thunder God Zeus,4,
-258,Anubis the Protector,4,
-259,Radiant Aphrodite,4,
-260,Catway,3,
-261,Hayabusa,4,
-267,Catornado,3,
-268,Red Riding Mina,1,
-269,Baby Gao,4,
-271,Shining Amaterasu,4,
-272,Splendid Ganesha,4,
-273,Cheerleader Cat,3,
-274,Tropical Kalisa,4,
-275,Midsummer Rabbit,4,
-276,Sunny Neneko,3,
-277,Funghi,2,
-278,Tanky,1,
-279,White Cat,1,
-280,Fortressy,1,
-282,Awa-Odori Cat,2,
-283,Pai-Pai,4,
-284,Express Cat,3,
-286,Strike Unit R.E.I.,4,
-287,Little Leaguer Cat,3,
-302,Lilith Cat,4,
-303,Food Stall Cat,2,
-304,Mighty Kat-A-Pult,4,
-305,Mighty Drednot,4,
-306,Mighty Bomburr,4,
-307,Vaulter Cat,3,
-308,Gardener Cat,2,
-310,Yuletide Nurse,4,
-311,Li'l Fish Cat,1,
-312,Li'l Lizard Cat,1,
-313,Li'l Titan Cat,1,
-314,Years-End Neneko,3,
-315,PIKOTARO,2,
-316,Wrathful Poseidon,4,
-317,CPAC,1,
-318,Miko Mitama,4,
-319,Killer Cat,2,
-322,Sarukani,4,
-323,Miyamoku Musashi,1,
-324,Curling Cat,2,
-325,Welterweight Cat,2,
-326,Mobius,4,
-327,Belial,3,
-328,Happy 100,1,
-329,Eggy Cat,2,
-330,Springtime Kenshin,4,
-331,Bunny & Canard,4,
-332,Easter Neneko,3,
-333,Shadow Gao,4,
-334,Trickster Himeyuri,4,
-335,Sea Maiden Ruri,4,
-336,Queen Reika,4,
-338,Imagawa Yoshimoto,4,
-351,Twinstars,4,
-356,Mighty Rekon Korps,4,
-358,Wolfchild Deale,4,
-359,Graveflower Verbena,4,
-360,Bora the Drake,4,
-361,Mizili the Nymph,4,
-362,Aer the Sylph,4,
-377,Rover Cat,2,
-378,Fencer Cat,3,
-379,Dark Mitama,4,
+0|0|Cat|Macho Cat|Mohawk Cat|
+1|0|Tank Cat|Wall Cat|Eraser Cat|
+2|0|Axe Cat|Brave Cat|Dark Cat|
+3|0|Gross Cat|Sexy Legs Cat|Macho Leg Cat|
+4|0|Cow Cat|Giraffe Cat|Lion Cat|
+5|0|Bird Cat|UFO Cat|The Flying Cat|
+6|0|Fish Cat|Whale Cat|Island Cat|
+7|0|Lizard Cat|Dragon Cat|King Dragon Cat|
+8|0|Titan Cat|Mythical Titan Cat|Jamiera Cat|
+9|1|Actress Cat|Mother Cat|Beefcake Cat|
+10|1|Kung Fu Cat|Drunken Master Cat|Dancer Cat|
+11|1|Mr.|Super Mr.|Hyper Mr.|
+12|1|Bondage Cat|Bondage CatNEO|Ultimate Bondage Cat|
+13|1|Dom Cat|Executioner|Dark Lazer|
+14|1|Cats in a Box|Cat Gang|Heavy Assault C.A.T.|
+15|1|Panties Cat|Leaf Cat|Lollycat|
+16|1|Moneko|Miss MONEKO||
+17|1|Tricycle Cat|Biker Cat|Unicycle Cat|
+18|1|Ninja Cat|Ninja Frog Cat|Flying Ninja Cat|
+19|1|Zombie Cat|Devil Cat|Skelecat|
+20|1|Samurai Cat|Knight Cat|Pastry Cat|
+21|1|Sumo Cat|Madame Sumo|Riceball Cat|
+22|1|Boogie Cat|Samba Cat|Gato Amigo|
+23|1|Skirt Cat|Tights Cat|Loincloth Cat|
+24|1|Valkyrie Cat|True Valkyrie Cat|Holy Valkyrie Cat|
+25|1|Bahamut Cat|Crazed Bahamut Cat|Awakened Bahamut Cat|
+26|1||||
+27|1||||
+28|1|Capsule Cat|Cramped Cats||
+29|1||||
+30|3|Bodhisattva Cat|Avalokitesvara Cat|Tathagata Cat|
+31|3|Delinquent Cat|Angry Delinquent Cat||
+32|3|Hip Hop Cat|Dancing Flasher Cat|Can Can Cat|
+33|3|Kotatsu Cat|Sadako Cat|Octopus Cat|
+34|4|Nekoluga|Unknown Cat|Ultralan Pasalan|
+35|3|Nerd Cat|Hacker Cat||
+36|3|Swimmer Cat|Butterfly Cat||
+37|2|Pogo Cat|Masai Cat|Jiangshi Cat|
+38|2|Wheel Cat|Solar Cat|Chill Cat|
+39|3|Apple Cat|Face Cat|iCat|
+40|3|Bath Cat|Sexy Bathtub Cat|Luxury Bath Cat|
+41|2|Salon Cat|Paris Cat||
+42|4|Ice Cat|Ice Queen Cat|Ice Crystal Cat|
+43|4|Cat Machine|Cat Machine Mk 2|Cat Machine Mk 3|
+44|4|Lesser Demon Cat|Greater Demon Cat|Balrog Cat|
+45|1||||
+46|2|Jurassic Cat|Jurassic Cat Sitter|Catasaurus|
+47|2|Viking Cat|Thor Cat|Maximum the Fighter|
+48|2|Pirate Cat|Captain Cat|Dread Pirate Catley|
+49|2|Thief Cat|Phantom Thief Cat|Goemon Cat|
+50|2|Bishop Cat|Monk Cat|Sanzo Cat|
+51|2|Fortune Teller Cat|Fisherman Cat|Doctor Cat|
+52|2|Shaman Cat|Necromancer Cat||
+53|4||||
+54|1||||
+55|2|Witch Cat|Sorceress Cat|Enchantress Cat|
+56|2|Archer Cat|Cupid Cat|Cataur|
+57|4|Marauder Cat|Berserker Cat|Paladin Cat|
+58|2|Swordsman Cat|Sword Master Cat|Elemental Duelist Cat|
+59|4|Baby Cat|Baby Cats|Cats in the Cradle|
+60|2|Bronze Cat|Michelangelo Cat||
+61|3|Sushi Cat|Fried Shrimp Cat|Roe Cat|
+62|1||||
+63|2|Sports Day Cat|Kidnapper Cats|Rampage Cats|
+64|2||||
+65|2||||
+66|4||||
+67|2||||
+68|3||||
+69|3||||
+70|2|Salaryman Cat|Grudge Cat|Ritual Cat|
+71|4|Sanada Yukimura|Wargod Yukimura|Immortal Yukimura|
+72|4|Maeda Keiji|Wargod Keiji|Immortal Keiji|
+73|4|Oda Nobunaga|Wargod Nobunaga||
+74|2|Reindeer Fish Cat|Sashimi Cat|Xmas Pudding Cat|
+75|4|Windy|Windy, type α|Divine Windy|
+76|4|Thundia|Thundia, type β|Divine Thundia|
+77|2||||
+78|2|Space Cat|Major Space Cat||
+79|2|Adult Cat|Sick Cat|Prisoner Cat|
+80|2|Evil Cat|Gentleman Cat|Gentleman Bros.|
+81|2|Doll Cats|Cat-o-tron|Nyalladin|
+82|1||||
+83|4|Sodom|Earth King Sodom|God-Emperor Sodom|
+84|4|Megidora|Holy Dragon Megidora|God-Emperor Megidora|
+85|4|Vars|Dragon King Vars|God-Emperor Vars|
+86|4|Kamukura|God Dragon Kamukura|God-Emperor Kamukura|
+87|4|Raiden|Dragonslayer Raiden|God-Emperor Raiden|
+88|2|Rope Jump Cat|Pair Rope Jump Cat||
+89|4||||
+90|4||||
+91|3|Crazed Cat|Crazed Macho Cat|Manic Mohawk Cat|
+92|3|Crazed Tank Cat|Crazed Wall Cat|Manic Eraser Cat|
+93|3|Crazed Axe Cat|Crazed Brave Cat|Manic Dark Cat|
+94|3|Crazed Gross Cat|Crazed Sexy Legs Cat|Manic Macho Legs|
+95|3|Crazed Cow Cat|Crazed Giraffe Cat|Manic Lion Cat|
+96|3|Crazed Bird Cat|Crazed UFO Cat|Manic Flying Cat|
+97|3|Crazed Fish Cat|Crazed Whale Cat|Manic Island Cat|
+98|3|Crazed Lizard Cat|Crazed Dragon Cat|Manic King Dragon|
+99|3|Crazed Titan Cat|Crazed M. Titan Cat|Manic Jamiera Cat|
+100|2|Maiden Cat|Sportsgirl Cat|Wrestling Cat|
+101|1||||
+102|1||||
+103|1||||
+104|2|Koi Cat|Gross Koi Cat|Kiss and Koi|
+105|4|Kuu|Kuu, type γ|Divine Kuu|
+106|4|Kai|Kai, type μ|Divine Kai|
+107|4|Coppermine|Coppermine, type κ|Divine Coppermine|
+108|1|Cat Bros|Secret Base||
+109|2|Madam Bride|Madam King|Madam the Savannah|
+110|2||||
+111|2||||
+112|2||||
+113|2||||
+114|2||||
+115|2||||
+116|2||||
+117|3||||
+118|3||||
+119|4||||
+120|1||||
+121|1||||
+122|2|Vacation Queen|Office Lady Cat|Call Center Cat|
+123|1|Bean Cats|Brah Cats||
+124|4|Date Masamune|Wargod Masamune|Immortal Masamune|
+125|4|Takeda Shingen|Wargod Shingen|Immortal Shingen|
+126|2|Clockwork Cat|Puppetmaster Cat||
+127|1|Flower Cat|Cooldown Cat|Bombercat|
+128|2|Vengeful Cat|Groucho Cat|Kite Cat|
+129|3|Gold Cat|Gold Macho Cat||
+130|1|Ururun Wolf|Ururun Cat||
+131|3|Neneko|Miss NENEKO||
+132|2|Kung Fu Cat X|Drunken Master Cat X|Iron Claw X|
+133|1||||
+134|4|Urashima Taro|Guardian Gamereon|King Gamereon|
+135|4|The Grateful Crane|Super Galaxy Cosmo||
+136|4|Momotaro|The Peach Angels|The Peach Devils|
+137|4|Kasa Jizo|Jizo's Moving Castle||
+138|4|Princess Kaguya|The Death Moon|The Chaos Moon|
+139|1||||
+140|1|Squish Ball Cat|Muscleman Cat||
+141|1||||
+142|1||||
+143|4|Nurse Cat|Heartful Nurse Cat||
+144|3|Cat Base Mini|Cat Base Jr.||
+145|2|Cat Gunslinger|Cat Eastwood||
+146|2|Stilts Cat|Totem Cat||
+147|2|Tin Cat|Plane Cat|Robocat|
+148|2|Rocker Cat|Artist Cat|Ramen Cat|
+149|2|Mer-Cat|Commando Cat|Cameraman Cat|
+150|3|Juliet Cat|Princess Juliet Cat|Juliet the Maiko|
+151|3|Weightlifter Cat|Ring Girl Cat||
+152|3|Figure Skating Cats|Drama Cats||
+153|3|Cat Toaster|Cat Projector|Catophone|
+154|2|Hoop Cat|Showoff Cat||
+155|4||||
+156|2||||
+157|1||||
+158|4|Uesugi Kenshin|Wargod Kenshin||
+159|4|Kalisa|Kalisa, type χ|Divine Kalisa|
+160|3||||
+161|4||||
+162|1||||
+163|1||||
+164|1||||
+165|1||||
+166|1||||
+167|2||||
+168|4|Asiluga|Asilan Pasalan|Assassinlan Pasalan|
+169|4|Kubiluga|Kubilan Pasalan|E. Kubilan Pasalan|
+170|4|Tecoluga|Tesalan Pasalan|Lufalan Pasalan|
+171|4|Balaluga|Balalan Pasalan|Piccolan Pasalan|
+172|1|Li'l Nyandam|Dark Emperor Catdam||
+173|3|Baby Mola|Young Man Mola||
+174|4|Mola King|Living Legend||
+175|1|Meowla Meowla|Catorpedo||
+176|2|Marshmallow Cat|Creepmallow||
+177|4|Dioramos|Archdragon Dioramos|God-Emperor Dioramos|
+178|1||||
+179|2||||
+180|4||||
+181|1||||
+182|1||||
+183|2|Cat Kart R|Cat Kart G|Cat Kart P|
+184|1|Mr. Ninja|Mint||
+185|4||||
+186|4||||
+187|4||||
+188|4||||
+189|3||||
+190|3||||
+191|1||||
+192|1||||
+193|1||||
+194|4|Akira|Shadow Akira|Inferno Akira|
+195|4|Mekako Saionji|Dr. Mekako|Mission Control Mekako|
+196|4|Catman|Dark Catman||
+197|2|Psychocat|Neo Psychocat|Corrupted Psychocat|
+198|2|Onmyoji Cat|Magica Cat|Thaumaturge Cat|
+199|3|Surfer Cat|Castaway Cat|Seafarer Cat|
+200|3|Metal Cat|Metal Macho||
+201|2|Drumcorps Cat|Banner Cat||
+202|1||||
+203|4|Kachi-Kachi|Fire Squad Kachiyama|Kachiyama Assault Brigade|
+204|1||||
+205|1||||
+206|1||||
+207|1||||
+208|1||||
+209|1|Li'l Cat|Li'l Macho Cat|Li'l Mohawk Cat|
+210|1|Li'l Tank Cat|Li'l Wall Cat|Li'l Eraser Cat|
+211|1|Li'l Axe Cat|Li'l Brave Cat|Li'l Dark Cat|
+212|4|The White Rabbit|The Black Cat||
+213|1|Catburger|Cat Royale|Value Meal Cat|
+214|2|HYAKUTARO|HYAKUTARO CC||
+215|2|MARCO|MARCO CC||
+216|2|TARMA|TARMA CC||
+217|2|ERI|ERI CC||
+218|2|FIO|FIO CC||
+219|3|SV-001|SV-001 CC||
+220|3|ALLEN O'NEIL|ALLEN O'NEIL CC||
+221|2|MARS PEOPLE|MARS PEOPLE CC||
+222|4|HUGE HERMIT|HUGE HERMIT CC||
+223|4|JUPITER KING|JUPITER KING CC||
+224|4|DONALD MORDEN|GENERAL MORDEN||
+225|4|HI-DO|HI-DO CC||
+226|4|Warlock and Pierre|Dark Merchant Babil|Mad Doctor Klay|
+227|2|Pumpcat|Cat O'Lantern||
+228|3|Gloomy Neneko|Witchy Neneko||
+229|4|Hallowindy|Hallowindy α||
+230|4|Spooky Thundia|Spooky Thundia β||
+231|1||||
+232|2||||
+233|2||||
+234|2||||
+235|3||||
+236|4||||
+237|3|Freshman Cat Jobs|Prof. Cat Jobs||
+238|3|Rich Cat III|Rich Cat Sr.||
+239|3|Sniper the Recruit|Sniper the Heavy||
+240|4|Togeluga|Togelan Pasalan|Shishilan Pasalan|
+241|4|Frosty Kai|Frosty Kai, Type μ||
+242|4|Santa Kuu|Santa Kuu, Type γ||
+243|4|Holy Coppermine|Holy Coppermine, Type κ||
+244|2|A Gift of Cats|Cat's Gift||
+245|1|Li'l Gross Cat|Li'l Sexy Legs Cat|Li'l Macho Legs Cat|
+246|1|Li'l Cow Cat|Li'l Giraffe Cat|Li'l Lion Cat|
+247|1|Li'l Bird Cat|Li'l UFO Cat|Li'l Flying Cat|
+248|1||||
+249|2||||
+250|2||||
+251|2||||
+252|2||||
+253|2||||
+254|2||||
+255|2||||
+256|1||||
+257|4|Thunder God Zeus|The Majestic Zeus||
+258|4|Anubis the Protector|Anubis the Unblemished||
+259|4|Radiant Aphrodite|Megaphrodite||
+260|3|Catway|Drone Cat||
+261|4|Hayabusa|Oni Hayabusa||
+262|1||||
+263|1||||
+264|1||||
+265|1||||
+266|1||||
+267|3|Catornado|Hurricat||
+268|1|Red Riding Mina|Crimson Mina||
+269|4|Baby Gao|Mighty Lord Gao||
+270|4||||
+271|4|Shining Amaterasu|Glorious Amaterasu||
+272|4|Splendid Ganesha|Exalted Ganesha||
+273|3|Cheerleader Cat|Waitress Cat||
+274|4|Tropical Kalisa|Tropical Kalisa X||
+275|4|Midsummer Rabbit|Midsummer Cat||
+276|3|Sunny Neneko|Seaside Neneko||
+277|2|Funghi|Funghi 'n' Cat||
+278|1|Tanky|Tanky 'n' Cat||
+279|1|White Cat|Gross White Cat||
+280|1|Fortressy|Castley||
+281|2||||
+282|2|Awa-Odori Cat|So-Ran Cat||
+283|4|Pai-Pai|Pai-Pai Z||
+284|3|Express Cat|Maglev Cat||
+285|1||||
+286|4|Strike Unit R.E.I.|Assault Unit R.E.I.||
+287|3|Little Leaguer Cat|Major Leaguer Cat||
+288|4||||
+289|4||||
+290|4||||
+291|4||||
+292|4||||
+293|3||||
+294|2||||
+295|2||||
+296|2||||
+297|2||||
+298|2||||
+299|2||||
+300|1||||
+301|2||||
+302|4|Lilith Cat|Succubus Cat||
+303|2|Food Stall Cat|Delivery Cat||
+304|4|Mighty Kat-A-Pult|CAT-6 Siege Engine||
+305|4|Mighty Drednot|B.C.S. Lionheart||
+306|4|Mighty Bomburr|NEK-0 Sky Fortress||
+307|3|Vaulter Cat|Polevaulter Cat ||
+308|2|Gardener Cat|Lumbercat||
+309|1||||
+310|4|Yuletide Nurse|Yule Knight Nurse||
+311|1|Li'l Fish Cat|Li'l Whale Cat|Li'l Island Cat|
+312|1|Li'l Lizard Cat|Li'l Dragon Cat|Li'l King Dragon Cat|
+313|1|Li'l Titan Cat|Li'l Mythical Titan|Li'l Jamiera Cat|
+314|3|Years-End Neneko|New Year Neneko||
+315|2|PIKOTARO|NEKOTARO||
+316|4|Wrathful Poseidon|Valiant Poseidon||
+317|1|CPAC|PPAP||
+318|4|Miko Mitama|Mitama the Oracle||
+319|2|Killer Cat|True Killer Cat||
+320|2||||
+321|1||||
+322|4|Sarukani|Rock Revengers||
+323|1|Miyamoku Musashi|Legendary Musashi||
+324|2|Curling Cat|Zamboney Cat||
+325|2|Welterweight Cat|Heavyweight Cat||
+326|4|Mobius|Miraculous Mobius||
+327|3|Belial|Reckless Belial||
+328|1|Happy 100|Heartful Happy 100||
+329|2|Eggy Cat|Easter Cat||
+330|4|Springtime Kenshin|Full-Bloom Kenshin||
+331|4|Bunny & Canard|Disciple Psychoduck||
+332|3|Easter Neneko|Hoppity Neneko||
+333|4|Shadow Gao|Diabolic Gao||
+334|4|Trickster Himeyuri|Himeyuri Ninetails||
+335|4|Sea Maiden Ruri|Sea Mistress Ruri||
+336|4|Queen Reika|Pharoah Reika||
+337|4||||
+338|4|Imagawa Yoshimoto|Wargod Yoshimoto||
+339|1||||
+340|2||||
+341|4||||
+342|1||||
+343|1||||
+344|3||||
+345|4||||
+346|4||||
+347|1||||
+348|2||||
+349|3||||
+350|4||||
+351|4|Twinstars|Twinstars, type Φ||
+352|1|Hermit Cat|Grandmaster Cat||
+353|2||||
+354|4|Seashore Kai|Seashore Kai, type μ||
+355|4|Mighty Rekon Korps|Orbital Platform Armageddon||
+356|1||||
+357|4|Wolfchild Deale|Wolf Princess Deale||
+358|4|Graveflower Verbena|Verbena the Bride||
+359|4|Bora|Bazibon||
+360|4|Mizli|Marinmizu||
+361|4|Aer|Erphuan||
+362|4||||
+363|4||||
+364|4||||
+365|4||||
+366|4||||
+367|4||||
+368|4||||
+369|1||||
+370|2||||
+371|2||||
+372|2||||
+373|2||||
+374|1||||
+375|1|Coin Cat|Macho Coin Cat||
+376|2|Rover Cat|Rover Cat Mk II||
+377|3|Fencer Cat|Kendo Cat||
+378|4|Dark Mitama|Gothic Mitama||
+379|2|Volley Cat|Ballet Cat||

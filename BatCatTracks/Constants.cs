@@ -7,44 +7,23 @@ using BatCatTracks.Models;
 
 namespace BatCatTracks
 {
-	// 6.0 versions
-	// 160 = normal almighties
-	// 154 = ultrasouls
-	// 173 = epicfest
-	// 168 = uberfest
-	// 167 = air
-	// 166 = red
-	// 6.1
-	// 139 = nekoluga
-	// 142 = dynamites
-	// 148 = galaxy gals
-	// 151 = dragon emps
-	// 157 = dark heroes
-	// 160 = almighties
-	// 163 = iron legion
-	// 175 = girls mons
-	// 154 = ultrasouls
-	// 177 = vajiras
-	// 183 = epicfest
-	// 182 = uberfest
-	// 167 = air
-	// 166 = red
+	// Updated for 6.6
 	public class Constants
 	{
-		public static readonly int Nekoluga = 139;
-		public static readonly int Dynamites = 142;
-		public static readonly int GalaxyGals = 185; //148 in 6.1
-		public static readonly int DragonEmps = 151;
-		public static readonly int DarkHeroes = 157;
-		public static readonly int Almighties = 160;
-		public static readonly int IronLegion = 186; //163 in 6.1
-		public static readonly int GirlsMons = 188; //175 pre 6.4
-		public static readonly int Elementals = 187;
-		public static readonly int UltraSouls = 154;
-		public static readonly int Vajiras = 177;
-		public static readonly int RedBusters = 166;
-		public static readonly int AirBusters = 167;
-		public static readonly int UberFest = 182;
-		public static readonly int EpicFest = 189; //183 pre 6.6
+		public static readonly int Nekoluga = 215;
+		public static readonly int Dynamites = 218;
+		public static readonly int GalaxyGals = 224;
+		public static readonly int DragonEmps = 227;
+		public static readonly int DarkHeroes = 233;
+		public static readonly int Almighties = 236;
+		public static readonly int IronLegion = 239;
+		public static readonly int GirlsMons = 248;
+		public static readonly int Elementals = 242;
+		public static readonly int UltraSouls = 230;
+		public static readonly int Vajiras = 221;
+		public static readonly int RedBusters = 245;
+		public static readonly int AirBusters = 246;
+		public static readonly int UberFest = 254;
+		public static readonly int EpicFest = 255;
 	}
 }
