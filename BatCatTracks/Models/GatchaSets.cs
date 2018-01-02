@@ -103,45 +103,56 @@ namespace BatCatTracks.Models
 
 		private void LoadEventData()
 		{
-			var assembly = Assembly.GetExecutingAssembly();
-			var resourceName = "BatCatTracks.Data.GatyaDataSetR1.csv";
-
-			List<string> lines;
-
-			using (Stream stream = assembly.GetManifestResourceStream(resourceName))
-			using (StreamReader reader = new StreamReader(stream))
+			string curline = null;
+			try
 			{
-				lines = new List<string>(reader.ReadToEnd().Split('\n'));
-			}
+				var assembly = Assembly.GetExecutingAssembly();
+				var resourceName = "BatCatTracks.Data.GatyaDataSetR1.csv";
 
-			EventUnits = new Dictionary<int, List<Unit>>();
+				List<string> lines;
 
-			int lineNum = 0;
-			foreach (string line in lines)
-			{
-				var fields = line.Split(',');
-				List<Unit> curEvent = new List<Unit>();
-				bool validEvent = true;
-
-				foreach (string s in fields)
+				using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+				using (StreamReader reader = new StreamReader(stream))
 				{
-					if (s == "-1")
-						break;
-
-					var unit = AllUnits.SingleOrDefault(u => u.Id == Convert.ToInt32(s));
-					// Skip events that have non-US cats
-					if (unit == null)
-					{
-						validEvent = false;
-						break;
-					}
-					curEvent.Add(unit);
+					lines = new List<string>(reader.ReadToEnd().Split('\n'));
 				}
 
-				if (validEvent)
-					EventUnits[lineNum] = curEvent;
+				EventUnits = new Dictionary<int, List<Unit>>();
 
-				lineNum++;
+				int lineNum = 0;
+				foreach (string line in lines)
+				{
+					curline = line;
+					if (string.IsNullOrWhiteSpace(line))
+						continue;
+					var fields = line.Split(',');
+					List<Unit> curEvent = new List<Unit>();
+					bool validEvent = true;
+
+					foreach (string s in fields)
+					{
+						if (s == "-1")
+							break;
+
+						var unit = AllUnits.SingleOrDefault(u => u.Id == Convert.ToInt32(s));
+						// Skip events that have non-US cats
+						if (unit == null)
+						{
+							validEvent = false;
+							break;
+						}
+						curEvent.Add(unit);
+					}
+
+					if (validEvent)
+						EventUnits[lineNum] = curEvent;
+
+					lineNum++;
+				}
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Error loading event " + curline);
 			}
 		}
 

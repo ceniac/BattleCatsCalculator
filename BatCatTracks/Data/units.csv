@@ -50,7 +50,7 @@
 49|2|Thief Cat|Phantom Thief Cat|Goemon Cat|
 50|2|Bishop Cat|Monk Cat|Sanzo Cat|
 51|2|Fortune Teller Cat|Fisherman Cat|Doctor Cat|
-52|2|Shaman Cat|Necromancer Cat||
+52|2|Shaman Cat|Necromancer Cat|Necro-Dancer Cat|
 53|4||||
 54|1||||
 55|2|Witch Cat|Sorceress Cat|Enchantress Cat|
@@ -141,7 +141,7 @@
 140|1|Squish Ball Cat|Muscleman Cat||
 141|1||||
 142|1||||
-143|4|Nurse Cat|Heartful Nurse Cat||
+143|4|Nurse Cat|Heartful Nurse Cat|Joyful Nurse Cat|
 144|3|Cat Base Mini|Cat Base Jr.||
 145|2|Cat Gunslinger|Cat Eastwood||
 146|2|Stilts Cat|Totem Cat||
@@ -378,3 +378,7 @@
 377|3|Fencer Cat|Kendo Cat||
 378|4|Dark Mitama|Gothic Mitama||
 379|2|Volley Cat|Ballet Cat||
+380|4|D'artanyan|Meow-sketeer||
+381|1|Farmer Cat|Harvest Cat||
+382|2|Glass Cat|Macho Glass Cat||
+383|1|Masked Yulala|Mystic Yulala||
