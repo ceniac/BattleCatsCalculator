@@ -13,7 +13,7 @@ namespace BatCatTracks
 		public static readonly int Nekoluga = 215;
 		public static readonly int Dynamites = 218;
 		public static readonly int GalaxyGals = 224;
-		public static readonly int DragonEmps = 227;
+		public static readonly int DragonEmps = 266;
 		public static readonly int DarkHeroes = 233;
 		public static readonly int Almighties = 236;
 		public static readonly int IronLegion = 239;
@@ -25,5 +25,7 @@ namespace BatCatTracks
 		public static readonly int AirBusters = 246;
 		public static readonly int UberFest = 261;
 		public static readonly int EpicFest = 255;
+
+		public static readonly int Baseball = 265;
 	}
 }

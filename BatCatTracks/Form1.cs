@@ -117,6 +117,9 @@ namespace BatCatTracks
 			AddUnits(equiv, Constants.GirlsMons);
 			AddUnits(equiv, Constants.Elementals);
 
+			// limited:
+			//AddUnits(equiv, Constants.Baseball);
+
 			for (int i = 0; i < 7; i++)
 			{
 				List<string> row = new List<string>();

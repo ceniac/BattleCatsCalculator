@@ -307,6 +307,18 @@ namespace BatCatTracks.Models
 			};
 			evt.Units = EventUnits[evt.Id];
 			Events.Add(evt);
+
+			// limited
+			
+			evt = new GatchaEvent
+			{
+				Id = Constants.Baseball,
+				Name = "Baseball",
+				RarityRate = FivePercent,
+				IsRegular = true
+			};
+			evt.Units = EventUnits[evt.Id];
+			Events.Add(evt);
 		}
 
 		//private void LoadRares()
