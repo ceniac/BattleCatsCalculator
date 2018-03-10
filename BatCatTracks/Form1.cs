@@ -178,7 +178,7 @@ namespace BatCatTracks
 
 			var curRate = GatchaSets.Instance.RarityRates[ddlRate.SelectedItem.ToString()];
 
-			string exportRow = "Row,Seed,NormalUnit,Rarity,RedBusters,Rarity,AirBusters,Rarity,UberFest,Rarity,UltraFest,Rarity";
+			string exportRow = "Row,Seed,NormalUnit,Rarity,RedBusters,Rarity,AirBusters,Rarity,MetalBusters,Rarity,UberFest,Rarity,UltraFest,Rarity";
 			export.Add(exportRow);
 			var gatcha = GatchaSets.Instance.Events.First(u => u.Name == ddlGatchaSet.SelectedItem.ToString());
 			var selectedSet = checker.GetUnits(seed, pullCount, gatcha.Units, curRate, CurrentPullMode);
@@ -186,6 +186,8 @@ namespace BatCatTracks
 			var redbusters = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
 			gatcha = GatchaSets.Instance.Events.First(g => g.Id == Constants.AirBusters);
 			var airbusters = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
+			gatcha = GatchaSets.Instance.Events.First(g => g.Id == Constants.MetalBusters);
+			var metalbusters = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
 			gatcha = GatchaSets.Instance.Events.First(g => g.Id == Constants.UberFest);
 			var uberfest = checker.GetUnits(seed, pullCount, gatcha.Units, gatcha.RarityRate, CurrentPullMode);
 			gatcha = GatchaSets.Instance.Events.First(g => g.Id == Constants.EpicFest);
@@ -210,6 +212,11 @@ namespace BatCatTracks
 					row.ABUnit = airbusters[i].Name;
 					row.ABR = RarityToPips(airbusters[i].Rarity);
 				}
+				if (selectedSet[i].Name != metalbusters[i].Name)
+				{
+					row.MBUnit = metalbusters[i].Name;
+					row.MBR = RarityToPips(metalbusters[i].Rarity);
+				}
 				if (selectedSet[i].Name != uberfest[i].Name)
 				{
 					row.UFUnit = uberfest[i].Name;
@@ -223,8 +230,8 @@ namespace BatCatTracks
 
 				table.Add(row);
 
-				exportRow = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}",
-					i, row.Seed, row.NormUnit, row.NR, row.RBUnit, row.RBR, row.ABUnit, row.ABR, row.UFUnit, row.UFR, row.EFUnit, row.EFR);
+				exportRow = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}",
+					i, row.Seed, row.NormUnit, row.NR, row.RBUnit, row.RBR, row.ABUnit, row.ABR, row.MBUnit, row.MBR, row.UFUnit, row.UFR, row.EFUnit, row.EFR);
 				export.Add(exportRow);
 			}
 			btnExport.Enabled = true;
@@ -243,6 +250,8 @@ namespace BatCatTracks
 			public string RBR { get; set; }
 			public string ABUnit { get; set; }
 			public string ABR { get; set; }
+			public string MBUnit { get; set; }
+			public string MBR { get; set; }
 			public string UFUnit { get; set; }
 			public string UFR { get; set; }
 			public string EFUnit { get; set; }

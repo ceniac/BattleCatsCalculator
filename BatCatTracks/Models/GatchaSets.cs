@@ -290,6 +290,16 @@ namespace BatCatTracks.Models
 
 			evt = new GatchaEvent
 			{
+				Id = Constants.MetalBusters,
+				Name = "Metal Busters",
+				RarityRate = FivePercent,
+				IsRegular = false
+			};
+			evt.Units = EventUnits[evt.Id];
+			Events.Add(evt);
+
+			evt = new GatchaEvent
+			{
 				Id = Constants.UberFest,
 				Name = "Uberfest",
 				RarityRate = NinePercent,
@@ -310,15 +320,15 @@ namespace BatCatTracks.Models
 
 			// limited
 			
-			evt = new GatchaEvent
-			{
-				Id = Constants.Baseball,
-				Name = "Baseball",
-				RarityRate = FivePercent,
-				IsRegular = true
-			};
-			evt.Units = EventUnits[evt.Id];
-			Events.Add(evt);
+			//evt = new GatchaEvent
+			//{
+			//	Id = Constants.Baseball,
+			//	Name = "Baseball",
+			//	RarityRate = FivePercent,
+			//	IsRegular = true
+			//};
+			//evt.Units = EventUnits[evt.Id];
+			//Events.Add(evt);
 		}
 
 		//private void LoadRares()
