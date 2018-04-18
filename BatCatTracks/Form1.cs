@@ -119,6 +119,7 @@ namespace BatCatTracks
 
 			// limited:
 			//AddUnits(equiv, Constants.Baseball);
+			AddUnits(equiv, Constants.Eva);
 
 			for (int i = 0; i < 7; i++)
 			{
