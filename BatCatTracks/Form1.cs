@@ -34,7 +34,7 @@ namespace BatCatTracks
 			{
 				ddlRate.Items.Add(name);
 			}
-			ddlRate.SelectedIndex = 1;
+			ddlRate.SelectedIndex = 2;
 
 			foreach (GatchaEvent evt in GatchaSets.Instance.Events.Where(e => e.IsRegular).OrderBy(e => e.Name))
 			{
@@ -119,7 +119,7 @@ namespace BatCatTracks
 
 			// limited:
 			//AddUnits(equiv, Constants.Baseball);
-			AddUnits(equiv, Constants.Eva);
+			//AddUnits(equiv, Constants.Eva);
 
 			for (int i = 0; i < 7; i++)
 			{

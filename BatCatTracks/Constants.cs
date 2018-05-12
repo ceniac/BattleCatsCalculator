@@ -7,7 +7,7 @@ using BatCatTracks.Models;
 
 namespace BatCatTracks
 {
-	// Updated for 6.9
+	// Updated for 6.10
 	public class Constants
 	{
 		public static readonly int Nekoluga = 215;
@@ -18,7 +18,7 @@ namespace BatCatTracks
 		public static readonly int Almighties = 236;
 		public static readonly int IronLegion = 239;
 		public static readonly int GirlsMons = 248;
-		public static readonly int Elementals = 242;
+		public static readonly int Elementals = 277;//temp for 6.10
 		public static readonly int UltraSouls = 230;
 		public static readonly int Vajiras = 221;
 		public static readonly int RedBusters = 245;

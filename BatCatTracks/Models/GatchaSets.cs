@@ -19,6 +19,7 @@ namespace BatCatTracks.Models
 
 		private readonly List<RarityRange> NinePercent = new List<RarityRange>();
 		private readonly List<RarityRange> FivePercent = new List<RarityRange>();
+		private readonly List<RarityRange> FivePercentSuperUp = new List<RarityRange>();
 		private readonly List<RarityRange> FourPercent = new List<RarityRange>();
 		private readonly List<RarityRange> ThreePercent = new List<RarityRange>();
 		public readonly Dictionary<string, List<RarityRange>> RarityRates = new Dictionary<string, List<RarityRange>>();
@@ -52,6 +53,13 @@ namespace BatCatTracks.Models
 			range = new RarityRange { Rarity = Rarity.UberRare, Min = 9500, Max = 9999 };
 			FivePercent.Add(range);
 
+			range = new RarityRange { Rarity = Rarity.Rare, Min = 0, Max = 6499 };
+			FivePercentSuperUp.Add(range);
+			range = new RarityRange { Rarity = Rarity.SuperRare, Min = 6500, Max = 9499 };
+			FivePercentSuperUp.Add(range);
+			range = new RarityRange { Rarity = Rarity.UberRare, Min = 9500, Max = 9999 };
+			FivePercentSuperUp.Add(range);
+
 			range = new RarityRange { Rarity = Rarity.Rare, Min = 0, Max = 7499 };
 			FourPercent.Add(range);
 			range = new RarityRange { Rarity = Rarity.SuperRare, Min = 7500, Max = 9599 };
@@ -69,6 +77,7 @@ namespace BatCatTracks.Models
 			RarityRates.Add("Three", ThreePercent);
 			RarityRates.Add("Four", FourPercent);
 			RarityRates.Add("Five", FivePercent);
+			RarityRates.Add("FiveWSuper", FivePercentSuperUp);
 			RarityRates.Add("Nine", NinePercent);
 		}
 
@@ -330,15 +339,15 @@ namespace BatCatTracks.Models
 			//evt.Units = EventUnits[evt.Id];
 			//Events.Add(evt);
 
-			evt = new GatchaEvent
-			{
-				Id = Constants.Eva,
-				Name = "EVA",
-				RarityRate = FivePercent,
-				IsRegular = true
-			};
-			evt.Units = EventUnits[evt.Id];
-			Events.Add(evt);
+			//evt = new GatchaEvent
+			//{
+			//	Id = Constants.Eva,
+			//	Name = "EVA",
+			//	RarityRate = FivePercent,
+			//	IsRegular = true
+			//};
+			//evt.Units = EventUnits[evt.Id];
+			//Events.Add(evt);
 		}
 
 		//private void LoadRares()
