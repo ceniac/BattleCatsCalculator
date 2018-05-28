@@ -34,12 +34,12 @@
 33|3|Kotatsu Cat|Sadako Cat|Octopus Cat|
 34|4|Nekoluga|Unknown Cat|Ultralan Pasalan|
 35|3|Nerd Cat|Hacker Cat|Cyberpunk Cat|
-36|3|Swimmer Cat|Butterfly Cat||
+36|3|Swimmer Cat|Butterfly Cat|Fishman Cat|
 37|2|Pogo Cat|Masai Cat|Jiangshi Cat|
 38|2|Wheel Cat|Solar Cat|Chill Cat|
 39|3|Apple Cat|Face Cat|iCat|
 40|3|Bath Cat|Sexy Bathtub Cat|Luxury Bath Cat|
-41|2|Salon Cat|Paris Cat||
+41|2|Salon Cat|Paris Cat|Cyborg Cat|
 42|4|Ice Cat|Ice Queen Cat|Ice Crystal Cat|
 43|4|Cat Machine|Cat Machine Mk 2|Cat Machine Mk 3|
 44|4|Lesser Demon Cat|Greater Demon Cat|Balrog Cat|
@@ -128,7 +128,7 @@
 127|1|Flower Cat|Cooldown Cat|Bombercat|
 128|2|Vengeful Cat|Groucho Cat|Kite Cat|
 129|3|Gold Cat|Gold Macho Cat||
-130|1|Ururun Wolf|Ururun Cat||
+130|1|Ururun Wolf|Ururun Cat|Awakened Ururun|
 131|3|Neneko|Miss NENEKO||
 132|2|Kung Fu Cat X|Drunken Master Cat X|Iron Claw X|
 133|1||||
@@ -143,7 +143,7 @@
 142|1||||
 143|4|Nurse Cat|Heartful Nurse Cat|Joyful Nurse Cat|
 144|3|Cat Base Mini|Cat Base Jr.||
-145|2|Cat Gunslinger|Cat Eastwood||
+145|2|Cat Gunslinger|Cat Eastwood|Rodeo Cat|
 146|2|Stilts Cat|Totem Cat|Acrobat Cats|
 147|2|Tin Cat|Plane Cat|Robocat|
 148|2|Rocker Cat|Artist Cat|Ramen Cat|
@@ -156,7 +156,7 @@
 155|4||||
 156|2||||
 157|1||||
-158|4|Uesugi Kenshin|Wargod Kenshin||
+158|4|Uesugi Kenshin|Wargod Kenshin|Immortal Kenshin|
 159|4|Kalisa|Kalisa, type χ|Divine Kalisa|
 160|3||||
 161|4||||
@@ -170,7 +170,7 @@
 169|4|Kubiluga|Kubilan Pasalan|E. Kubilan Pasalan|
 170|4|Tecoluga|Tesalan Pasalan|Lufalan Pasalan|
 171|4|Balaluga|Balalan Pasalan|Piccolan Pasalan|
-172|1|Li'l Nyandam|Dark Emperor Catdam||
+172|1|Li'l Nyandam|Dark Emperor Catdam|Schoolbus Nyandam|
 173|3|Baby Mola|Young Man Mola||
 174|4|Mola King|Living Legend||
 175|1|Meowla Meowla|Catorpedo||
@@ -210,7 +210,7 @@
 209|1|Li'l Cat|Li'l Macho Cat|Li'l Mohawk Cat|
 210|1|Li'l Tank Cat|Li'l Wall Cat|Li'l Eraser Cat|
 211|1|Li'l Axe Cat|Li'l Brave Cat|Li'l Dark Cat|
-212|4|The White Rabbit|The Black Cat||
+212|4|The White Rabbit|The Black Cat|The Grey Fox|
 213|1|Catburger|Cat Royale|Value Meal Cat|
 214|2|HYAKUTARO|HYAKUTARO CC||
 215|2|MARCO|MARCO CC||
@@ -266,7 +266,7 @@
 265|1||||
 266|1||||
 267|3|Catornado|Hurricat||
-268|1|Red Riding Mina|Crimson Mina||
+268|1|Red Riding Mina|Crimson Mina|Awakened Mina|
 269|4|Baby Gao|Mighty Lord Gao||
 270|4||||
 271|4|Shining Amaterasu|Glorious Amaterasu||
@@ -321,7 +321,7 @@
 320|2||||
 321|1||||
 322|4|Sarukani|Rock Revengers||
-323|1|Miyamoku Musashi|Legendary Musashi||
+323|1|Miyamoku Musashi|Legendary Musashi|Awakened Musashi|
 324|2|Curling Cat|Zamboney Cat||
 325|2|Welterweight Cat|Heavyweight Cat||
 326|4|Mobius|Miraculous Mobius||
@@ -397,16 +397,32 @@
 396|4|Ganglion|Ganglion the Ancient||
 397|4|Sakura Sonic|Afterschool Sakura||
 398|1||||
-402|4|Voli|Volta||
-406|2|Rei Cat|||
-407|2|Asuka Cat|||
-408|2|Mari Cat|||
-409|3|Rei Ayanami|||
-410|3|Asuka Langley|||
-411|3|Mari Illustrious|||
-412|4|EVA-0|||
-413|4|EVA-1|||
-414|4|EVA-2|||
-415|4|Shinji Cat|||
-416|4|Moon Operators|||
-418|4|UR7|||
+399|2|Mentori|Mentori CC||
+400|1|Imoto|Imoto CC||
+401|4|Voli|Volta||
+402|2|Shinji & Cat|Plug Suit Shinji||
+403|1|Gendo & Fuyutsuki Cats|Moon Gendo & Fuyutsuki Cats||
+404|2|Giraffe Unit-01|Giraffe Unit-02||
+405|1|Kaworu & Cat|Plug Suit Kaworu|Moon Kaworu|
+406|2|Rei Cat|Ayanami Cat (TBC)||
+407|2|Asuka Cat|Apron Asuka||
+408|2|Mari Cat|Special Ops Mari||
+409|3|Rei Ayanami|Plug Suit Rei||
+410|3|Asuka Langley|Plug Suit Asuka||
+411|3|Mari Illustrious|Plug Suit Mari||
+412|4|Eva Unit-00|Eva Unit-00 & Cat||
+413|4|Eva Unit-01|Eva Unit-01 & Cat||
+414|4|Eva Unit-02|Eva Unit-02 & Cat||
+415|4|Shinji Cat|Toji & Kensuke Cats||
+416|4|Moon Operators|NERV Moon||
+417|4|Mighty Thermae D-Lux|Subterra Guardians||
+418|1|Crazed Moneko|Corrupted Moneko||
+419|2|Pokota|Pokota CC||
+420|2|Ovis|Ovis CC||
+421|2|Coco|Coco CC||
+422|2||||
+423|2||||
+424|2||||
+425|1||||
+426|1|Mecha-Bun|Mecha-Bun Mk II|Ultimate Mecha-Bun|
+427|4|Cat Clan Heroes|Cat Guild Heroes||
